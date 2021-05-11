@@ -2,9 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 import { useHistory, useLocation } from "react-router-dom";
 import { useAuth } from '../../contexts/AuthContext'; 
+import logo from './logo.jpeg';
 import './style.css';
 ;
 export default function LoginPage() {
@@ -32,7 +34,9 @@ export default function LoginPage() {
     <Container className = "bg-image" fluid>
       <Row>
         <Col sm={12}>
-          <section className="form-section">
+          <Image className="logo" src={logo} alt ="Logo"/>
+          <section className="form-section">              
+            <label className= "ingreso"> Ingresar </label>
             <Form name="formSingin" onSubmit={submit}>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Correo electronico</Form.Label>
@@ -45,8 +49,8 @@ export default function LoginPage() {
               <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Recordar sesion" />
               </Form.Group>
-              <Button variant="primary" type="submit">
-                Ingresar
+              <Button className = "btn-margen" variant="success" type="submit">
+                Iniciar Sesion
               </Button>
             </Form>
           </section>
