@@ -29,7 +29,7 @@ export default function LoginPage() {
   };
 
   return (
-    <Container fluid>
+    <Container className = "bg-image" fluid>
       <Row>
         <Col sm={12}>
           <section className="form-section">
