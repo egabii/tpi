@@ -7,7 +7,7 @@ import {
 import { ProvideAuth, useAuth } from './contexts/AuthContext';
 import HomePage from './pages/HomePage';
 import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
-import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad';
+import NuevaPropiedadPage from './pages/Propiedades/NuevaPropiedad';
 import AgendaPage from './pages/AgendaPage';
 import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
@@ -47,8 +47,8 @@ function ProtectedPage() {
         <Route exact path="/agenda">
           <AgendaPage />
         </Route>
-        <Route exact path="nuevaPropiedad">
-          <NuevaPropiedad />
+        <Route exact path="/nuevaPropiedad">
+          <NuevaPropiedadPage />
         </Route>
       </Switch>
     </Layout>
