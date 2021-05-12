@@ -33,9 +33,10 @@ export default function LoginPage() {
   return (
     <Container className = "bg-image" fluid>
       <Row>
-        <Col sm={12}>
-          <Image className="logo" src={logo} alt ="Logo"/>
-          <section className="form-section">              
+        <Col sm={12}>    
+        <Image className="logo" src={logo} alt ="Logo"/>   
+          <section className="form-section">     
+             
             <label className= "ingreso"> Ingresar </label>
             <Form name="formSingin" onSubmit={submit}>
               <Form.Group controlId="formBasicEmail">
