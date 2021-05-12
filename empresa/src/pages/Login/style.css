@@ -1,18 +1,20 @@
+
 .bg-image {
-  background: url("https://st.depositphotos.com/1968353/2508/i/600/depositphotos_25081731-stock-photo-reflective-skyscrapers-business-office-buildings.jpg") no-repeat;
-  background-size: 60% 150%;
-  height: 100%;
+  background: url("image 1.png") no-repeat;
+  background-size: 60% 100vh;
 }
 .form-section { 
-  height: 950px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   position: relative;
-  width: 300px;
-  left: 1250px;
-  top: 250px;
+  width: 20%;
+  left: 75%;
+  top: 10%;
 }
 .btn-margen{
   margin-top: 25px;
-  width:300px ;
+  width:90% ;
 }
 .ingreso {
   font-family: sans-serif;
@@ -23,8 +25,9 @@
 }
 .logo{
   position: relative;
-  width: 300px;
-  left:1250px;
-  top:200px;
+  width: 20%;
+  height:20%;
+  left:75%;
+  top:5%;
 }
 
