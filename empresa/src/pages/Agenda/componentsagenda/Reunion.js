@@ -5,7 +5,7 @@ const Reunion = ({reunion, onDelete, onToggle}) => {
     return (
         <div className = {`reunion ${reunion.reminder ? 'reminder' : ' ' }`} 
         onDoubleClick={() => onToggle(reunion.id)}>
-            <h3>{reunion.text}<FaTimes style= {{color:'red', cursor:'pointer'}} onClick={() => onDelete(reunion.id)}/></h3>
+            <h6>{reunion.text}<FaTimes style= {{color:'red', cursor:'pointer'}} onClick={() => onDelete(reunion.id)}/></h6>
             <p>{reunion.day}    
             </p>
         </div>

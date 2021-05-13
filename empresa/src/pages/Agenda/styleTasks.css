@@ -9,7 +9,9 @@
 
 .containerTask {
   padding-right: 0;
-  margin: 30px auto;
+  width: 85%;
+  height: 85%;
+  margin: 30px 5px;
   overflow: auto;
   min-height: 300px;
   border: 3px solid steelblue;
@@ -73,4 +75,21 @@ label{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.reunion {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 200;
+}
+
+.reunion.reminder {
+  border-left: 5px solid green;
+}
+
+.separate{
+  margin-top: 15px;
+
 }
