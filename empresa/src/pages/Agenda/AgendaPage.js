@@ -50,18 +50,18 @@ export default function AgendaPage() {
       <Row>
         <Col>
             <Header onAdd = {() => setShowAddReunion(!showAddReunion)} 
-          showAdd={showAddReunion}/>
-          {showAddReunion && <AddReunion onAdd={addReunion} />}
-          {reuniones.length >0 ? ( //mensaje opcional de si hay tareas o no
-          <Reuniones reuniones={reuniones} 
-          onDelete ={borrarReunion} 
-          onToggle= {toggleReminder}/>
-          ):('No tasks to show')}
+            showAdd={showAddReunion}/>
+            {showAddReunion && <AddReunion onAdd={addReunion} />}
+            {reuniones.length >0 ? ( //mensaje opcional de si hay tareas o no
+            <Reuniones reuniones={reuniones} 
+            onDelete ={borrarReunion} 
+            onToggle= {toggleReminder}/>
+            ):('No tasks to show')}
             
         </Col>
 
       </Row>
-      </Container>
+    </Container>
       
   );
 }
