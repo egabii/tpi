@@ -7,6 +7,7 @@ import logoIn from "./logoIn.jpeg";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup'
+import {Link} from 'react-router-dom'
 
 
 export default function HomePage(){
@@ -37,9 +38,11 @@ export default function HomePage(){
                       </ListGroup.Item>
                       </ListGroup>
                     </Card.Text>
-                    <Button variant="success">Nueva Propiedad</Button>
+                    <Link to="/nuevaPropiedad">
+                      <Button variant="success">Nueva Propiedad</Button>
+                    </Link>
                   </Card.Body>
-                </Card>
+              </Card>
               </div>
               <div className='agenda'>
               <Card className='bg-tareas'>
@@ -55,7 +58,9 @@ export default function HomePage(){
                       </ListGroup.Item>
                       </ListGroup>
                     </Card.Text>
-                    <Button variant="success">Nueva Propiedad</Button>
+                      <Link to="/nuevaPropiedad">
+                        <Button variant="success">Nueva Propiedad</Button>
+                      </Link>
                   </Card.Body>
                 </Card>
               </div>
@@ -71,3 +76,4 @@ export default function HomePage(){
 
   );
 }
+//d
