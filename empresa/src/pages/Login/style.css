@@ -2,15 +2,16 @@
 .bg-image {
   background: url("image 1.png") no-repeat;
   background-size: 60% 100vh;
+  position: fixed;  /* No scroll in login page */
 }
 .form-section { 
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  position: relative;
-  width: 20%;
-  left: 75%;
-  top: 10%;
+    height: 100vh;
+    position: relative;
+    width: 20%;
+    left: 75%;
+    top: 10%;
 }
 .btn-margen{
   margin-top: 25px;
@@ -30,4 +31,3 @@
   left:75%;
   top:5%;
 }
-

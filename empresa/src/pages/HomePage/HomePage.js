@@ -1,0 +1,73 @@
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
+import "./estiloHomePage.css";
+import logoIn from "./logoIn.jpeg";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup'
+
+
+export default function HomePage(){
+  
+
+  return (
+
+    <Container fluid className='bg-home'>
+      <Row>
+        <Col>
+            
+            <div className='header'>
+            <h3>BIENVENIDO, Matias Acosta</h3>
+              <Image src={logoIn} rounded className='img-log' />
+            </div>
+            <div className='Home'>
+              <div className='actions'>
+              <Card className='bg-tareas'>
+                  <Card.Header>ULTIMAS ACCIONES</Card.Header>
+                  <Card.Body  >
+                    <Card.Text>
+                      <ListGroup>
+                      <ListGroup.Item action variant="info">
+                        Venta Realizada
+                      </ListGroup.Item>
+                      <ListGroup.Item action variant="info">
+                        Alquiler Realizado
+                      </ListGroup.Item>
+                      </ListGroup>
+                    </Card.Text>
+                    <Button variant="success">Nueva Propiedad</Button>
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className='agenda'>
+              <Card className='bg-tareas'>
+                  <Card.Header>ULTIMAS ACCIONES</Card.Header>
+                  <Card.Body  >
+                    <Card.Text>
+                      <ListGroup>
+                      <ListGroup.Item action variant="info">
+                        Venta Realizada
+                      </ListGroup.Item>
+                      <ListGroup.Item action variant="info">
+                        Alquiler Realizado
+                      </ListGroup.Item>
+                      </ListGroup>
+                    </Card.Text>
+                    <Button variant="success">Nueva Propiedad</Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+           
+        </Col>
+
+        
+      
+      </Row>
+    </Container>
+  
+
+  );
+}

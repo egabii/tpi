@@ -1,0 +1,35 @@
+.bg-home{
+    background: url(bg-image.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px;
+}
+
+.img-log{
+    width: 60px;
+    height: 60px;
+}
+
+.actions{
+    margin-top: 25%;
+    width: 55%;
+}
+.bg-tareas{
+    background-color: rgba(58, 151, 58, 0.411);
+}
+
+.agenda{
+    margin-top: 10%;
+    width: 30%;
+}
+.Home{
+    display: flex;
+    justify-content: space-between;
+}
