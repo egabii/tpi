@@ -6,17 +6,18 @@ import AddReunion from './componentsagenda/AddReunion';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import styleTask from './styleTasks.css';
 
 export default function AgendaPage() {
   const [showAddReunion, setShowAddReunion] = useState (false)
   const [reuniones,setReunion] = useState([{
     id: 1,
-    text: "Meeting at School",
+    text: "Propiedad alquilada",
     day: "feb 5th at 2:30 pm",
     reminder: false,
   },
   { id: 2, 
-    text: "Meeting at School",
+    text: "Propiedad vendidad",
     day: "feb 6th at 3:30 pm", 
     reminder: true
 
@@ -46,9 +47,9 @@ export default function AgendaPage() {
     setReunion([...reuniones,newReunion])
   }
   return (
-    <Container>
+    <Container className='containerTask'>
       <Row>
-        <Col>
+        <Col md={8}>
             <Header onAdd = {() => setShowAddReunion(!showAddReunion)} 
             showAdd={showAddReunion}/>
             {showAddReunion && <AddReunion onAdd={addReunion} />}

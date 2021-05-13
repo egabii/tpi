@@ -8,7 +8,7 @@ import { ProvideAuth, useAuth } from './contexts/AuthContext';
 import HomePage from './pages/HomePage/HomePage';
 import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
 import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
-import AgendaPage from './pages/AgendaPage';
+import AgendaPage from './pages/Agenda/AgendaPage';
 import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
