@@ -3,6 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Navbar from '../components/Navbar';
+import './style.css';
 
 export default function Layout({ children }) {
 
