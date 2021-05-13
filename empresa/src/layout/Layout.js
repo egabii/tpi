@@ -7,16 +7,16 @@ import Navbar from '../components/Navbar';
 export default function Layout({ children }) {
 
   return (
-    <Container fluid="md">
+    <Container fluid>
       <Row>
-        <Col md={3}>
+        <Col md={2} className="bg-dark">
           <div className="d-flex flex-column p-3 text-white bg-dark" style={{ height: '100vh' }}>
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-              <span className="fs-4">Sidebar</span>
+              <span className="fs-4">DOMUS 2.0</span>
             </a>
             <hr />
             <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic" className="bg-black">
+              <Dropdown.Toggle variant="dark" id="dropdown-basic">
                 <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
                 <strong>mdo</strong>
               </Dropdown.Toggle>
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
             <Navbar />
           </div>
         </Col>
-          <Col md={9}>
+          <Col md={10}>
             { children }
           </Col>
       </Row>

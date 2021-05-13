@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import { ProvideAuth, useAuth } from './contexts/AuthContext';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
 import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
 import AgendaPage from './pages/AgendaPage';
