@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Calendar from './Calendar/Calendar.js'
 import styleTask from './styleTasks.css';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
+import Schedule from './Schedule/Schedule.js'
 
 export default function AgendaPage() {
   const [showAddReunion, setShowAddReunion] = useState (false)
@@ -53,24 +54,8 @@ export default function AgendaPage() {
     <Container  >
       <Row>
         <Col >
-          <div className='containerTask'>
-            <Header onAdd = {() => setShowAddReunion(!showAddReunion)} 
-              showAdd={showAddReunion}/>
-              {showAddReunion && <AddReunion onAdd={addReunion} />}
-              {reuniones.length >0 ? ( //mensaje opcional de si hay tareas o no
-              <Reuniones reuniones={reuniones} 
-              onDelete ={borrarReunion} 
-              onToggle= {toggleReminder}/>
-              ):('No tasks to show')}
-            </div> 
-            
+          <Schedule/>
         </Col>
-        <Col md = 'auto'>
-            <div className='separate'>
-                  <CalendarComponent></CalendarComponent>
-            </div>
-        </Col>
-
       </Row>
     </Container>
       
