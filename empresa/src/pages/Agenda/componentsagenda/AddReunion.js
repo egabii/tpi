@@ -26,7 +26,7 @@ const AddReunion = ({onAdd}) => {
             
             </div>
             <div classname = 'form-control'> 
-                <label>Day & Time</label>
+                <label>Dia y Hora</label>
                 <input type= 'text ' placeholder = 'Day & Time'
                 onChange = {(e) => setDay(e.target.value)}></input>
             
@@ -39,7 +39,7 @@ const AddReunion = ({onAdd}) => {
                 onChange = {(e) => setReminder(e.currentTarget.value)}/>
 
             </div>
-            <input type ='submit' value = 'Save  task' className = 'btn btn-block'/>
+            <input type ='submit' value = 'Save  task' className = 'btnSubmit btn-block'/>
         </form>
     )
 }

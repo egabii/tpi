@@ -1,0 +1,103 @@
+[33mcommit 07088a53cae65b3b5315c152fd875c2549a1df15[m[33m ([m[1;36mHEAD -> [m[1;32mMati[m[33m, [m[1;31morigin/Mati[m[33m)[m
+Author: MatuAcosta <acosta_matias8@hotmail.com>
+Date:   Thu May 13 12:10:21 2021 -0300
+
+    ModificandoAgenda
+
+[33mcommit c13badd431f9671dd9db157331f4212b3941c01f[m
+Author: MatuAcosta <acosta_matias8@hotmail.com>
+Date:   Thu May 13 12:10:02 2021 -0300
+
+    ModificandoAgenda
+
+[33mcommit ed853b7d8a152630dd3dd031ebeaef5f15cb0119[m
+Merge: a219f92 a404966
+Author: Juan Cruz <juancarrizoast@gmail.com>
+Date:   Thu May 13 00:02:56 2021 -0300
+
+    Pagina agregar multimedia
+
+[33mcommit a219f92afa01e51adc32cc70e582f7bf44538c2e[m
+Author: Juan Cruz <juancarrizoast@gmail.com>
+Date:   Wed May 12 23:55:41 2021 -0300
+
+    Pagina Agregar Imagenes
+
+[33mcommit a404966ab19692e22fb022813ca5ac99902998e5[m
+Author: gonza zoloaga <gonzalozoloaga44@gmail.com>
+Date:   Wed May 12 22:01:20 2021 -0300
+
+    Hicimos el home page con matu
+
+[33mcommit 3e4810613f66e0a8541e772b6ae38ee9397b15b7[m[33m ([m[1;32mHomepage[m[33m)[m
+Merge: 5327dae 9c7ab1a
+Author: gonza1020 <81094140+gonza1020@users.noreply.github.com>
+Date:   Wed May 12 21:54:32 2021 -0300
+
+    Merge pull request #3 from egabii/nueva-propiedad
+    
+    arreglando sidebar y pagina nueva propiedad
+
+[33mcommit 9c7ab1ada1fcfed148109d42de7ce67b76491564[m[33m ([m[1;31morigin/nueva-propiedad[m[33m)[m
+Author: Gabriel Muller <ernesto.gabriel90@gmail.com>
+Date:   Wed May 12 20:50:10 2021 -0300
+
+    arreglando sidebar y pagina nueva propiedad
+
+[33mcommit 5327daee4a314795bea9f1fef394e9135da764ea[m
+Author: Gabriel Muller <ernesto.gabriel90@gmail.com>
+Date:   Tue May 11 22:17:13 2021 -0300
+
+    pag nueva propiedad, cards, sidebar
+
+[33mcommit f6895f5e82a2e0b179694628f24c3ef8c23c1aaa[m
+Merge: 9cd59c8 2b0f074
+Author: gonza1020 <81094140+gonza1020@users.noreply.github.com>
+Date:   Tue May 11 21:58:39 2021 -0300
+
+    Merge pull request #2 from egabii/Mati
+    
+    Login Arreglado gabi
+
+[33mcommit 2b0f074b97a2336fe955c11ec25000d98cfbfa9c[m
+Author: gonza zoloaga <gonzalozoloaga44@gmail.com>
+Date:   Tue May 11 21:22:46 2021 -0300
+
+    LoginArreglado
+    
+    Puede ferpaaa
+    
+    Co-Authored-By: MatuAcosta <83653785+MatuAcosta@users.noreply.github.com>
+
+[33mcommit 1a23e0221953da573dc7f16cd59d7b81f04a8c10[m
+Author: MatuAcosta <acosta_matias8@hotmail.com>
+Date:   Tue May 11 21:05:29 2021 -0300
+
+    Update style.css
+
+[33mcommit 9cd59c87573757cdf839e589f9077379f0ba5286[m
+Author: MatuAcosta <acosta_matias8@hotmail.com>
+Date:   Tue May 11 20:12:42 2021 -0300
+
+    cambios en el login
+
+[33mcommit 6bdf395f95284869bff1f52638a7bd22342fe6f7[m
+Merge: 783ee0a 5c16b46
+Author: Juan Cruz Carrizo <68020794+juancrucarrizo@users.noreply.github.com>
+Date:   Tue May 11 16:01:10 2021 -0300
+
+    Merge pull request #1 from egabii:LoginChangesGonza
+    
+    Agregue la clase bd-image a container
+
+[33mcommit 5c16b4632fb79005d00a70e660d3f6d93615dba3[m[33m ([m[1;31morigin/LoginChangesGonza[m[33m, [m[1;32mLoginChangesGonza[m[33m)[m
+Author: gonza zoloaga <gonzalozoloaga44@gmail.com>
+Date:   Tue May 11 12:59:04 2021 -0300
+
+    Agregue la clase bd-image a container
+
+[33mcommit 783ee0a5e302098b85077dbe52de9f3a1d84abc6[m
+Author: Gabriel Muller <ernesto.gabriel90@gmail.com>
+Date:   Sun May 9 23:39:58 2021 -0300
+
+    primer commit
