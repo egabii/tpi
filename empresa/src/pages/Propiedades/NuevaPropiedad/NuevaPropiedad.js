@@ -1,10 +1,15 @@
+import {Router,Route} from "react-router-dom";
+import Imagenes from "./AgregarImagen/CajaImagen"
+import AppImagen from "./AgregarImagen/AppImagen"
+import { Link } from 'react-router-dom';
+import Prueba from "./AgregarImagen/AppImagen";
 
-import Imagenes from "./CajaImagen"
 export default function NuevaPropiedad() {
   return (
   <div class="card text-center">
     <h1>Nueva Propiedad</h1>
     <h3>Ingresar datos</h3>
+    <Link to="/prueba"></Link>
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
