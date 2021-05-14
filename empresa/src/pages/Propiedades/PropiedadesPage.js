@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './estilo.css';
 
 export default function PropiedadesPage() {
-
+  
   const propiedades = [
     {
       inmueble: 1,
@@ -26,6 +26,7 @@ export default function PropiedadesPage() {
   ];
 
   return (
+    <h1>Marce y Franco</h1>
     <div>
       <h1>Pagina de propiedades</h1>
       <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
