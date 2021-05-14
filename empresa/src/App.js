@@ -1,13 +1,15 @@
+import { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Redirect,
-  Route
+  Route,
+  useHistory
 } from "react-router-dom";
 import { ProvideAuth, useAuth } from './contexts/AuthContext';
 import HomePage from './pages/HomePage/HomePage';
 import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
-import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
+import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad';
 import AgendaPage from './pages/Agenda/AgendaPage';
 import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
@@ -35,6 +37,12 @@ function PrivateRoute({ children, ...rest }) {
 };
 
 function ProtectedPage() {
+  let history = useHistory();
+
+  useEffect(() => {
+    history.push('/home');
+  }, []);
+
   return (
     <Layout>
       <Switch>
