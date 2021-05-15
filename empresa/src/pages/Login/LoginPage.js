@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { useHistory, useLocation } from "react-router-dom";
-import { useAuth } from '../../contexts/AuthContext'; 
+import { useAuth } from '../../contexts/AuthContext';
 import logo from './logo.jpeg';
 import './style.css';
 ;
@@ -31,26 +31,26 @@ export default function LoginPage() {
   };
 
   return (
-    <Container className = "bg-image" fluid>
-      <Row>
-        <Col sm={12}>    
-        <Image className="logo" src={logo} alt ="Logo"/>   
-          <section className="form-section">     
-             
-            <label className= "ingreso"> Ingresar </label>
+    <Container fluid>
+      <Row className="row-height">
+        <Col md={7} className="bg-image"></Col>
+        <Col md={5}>
+          <Image className="logo" src={logo} alt="Logo" width={225} height={175} />
+          <section className="form-section">
+            <h3> Ingresar </h3>
             <Form name="formSingin" onSubmit={submit}>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Correo electronico</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" required />
               </Form.Group>
-              <Form.Group controlId="formBasicPassword">
+              <Form.Group controlId="formBasicPassword" className="form-group-child">
                 <Form.Label>Contrasenia</Form.Label>
                 <Form.Control type="password" placeholder="Password" required />
               </Form.Group>
-              <Form.Group controlId="formBasicCheckbox">
+              <Form.Group controlId="formBasicCheckbox" className="form-group-child">
                 <Form.Check type="checkbox" label="Recordar sesion" />
               </Form.Group>
-              <Button className = "btn-margen" variant="success" type="submit">
+              <Button className="btn-margen" variant="success" type="submit" block>
                 Iniciar Sesion
               </Button>
             </Form>
