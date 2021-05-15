@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <Container fluid>
       <Row>
         <Col md={2} className="bg-dark">
-          <div className="d-flex flex-column p-3 text-white bg-dark" style={{ height: '100vh' }}>
+          <div className="d-flex flex-column p-3 text-white bg-dark" style={{ height: '100vh' , position: 'fixed' }}>
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <span className="fs-4">DOMUS 2.0</span>
             </a>

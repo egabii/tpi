@@ -10,19 +10,25 @@ export default function PropiedadesPage() {
       inmueble: 1,
       titulo: 'Carri',
       descripcion: 'Bella Vista',
-      image: 'https://picsum.photos/10/10'
+      image: 'https://picsum.photos/320/220'
     },
     {
       inmueble: 2,
       titulo: 'Gonza',
       descripcion: 'Bella Vista',
-      image: 'https://picsum.photos/10/10'
+      image: 'https://picsum.photos/320/220'
     },
     {
       inmueble: 3,
       titulo: 'Matias',
       descripcion: 'Corrientes',
-      image: 'https://picsum.photos/10/10'
+      image: 'https://picsum.photos/320/220'
+    }, 
+    {
+      inmueble: 4,
+      titulo: 'Matias',
+      descripcion: 'Corrientes',
+      image: 'https://picsum.photos/320/220'
     }
   ];
 
@@ -34,12 +40,15 @@ export default function PropiedadesPage() {
       <div className="body">
         <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
         <div className="caja-tarjetas">
+          
           { propiedades.map(propiedad => <Card 
             key={propiedad.inmueble} 
             titulo={propiedad.titulo} 
             descripcion={propiedad.descripcion} 
             imagen={propiedad.image}
           />) }
+
+           
         </div>
       </div>
     </div>
