@@ -1,4 +1,11 @@
-import { ScheduleComponent, WorkWeek, Day,Week, Month, Inject,Agenda,Today } from '@syncfusion/ej2-react-schedule';
+import { 
+    ScheduleComponent, 
+    WorkWeek, 
+    Day,
+    Week, 
+    Month, 
+    Inject,
+    Agenda } from '@syncfusion/ej2-react-schedule';
 import './schedule.css'
 const Schedule = () => {
     return (
