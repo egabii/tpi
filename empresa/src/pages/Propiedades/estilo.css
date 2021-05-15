@@ -4,3 +4,11 @@
   justify-content: space-between;
 }
 
+.cabecera-filtros{
+  height: 200px;
+}
+
+.provincia{
+  margin-top: 2%;
+  width: 20%;
+}

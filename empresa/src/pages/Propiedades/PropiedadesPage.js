@@ -27,15 +27,20 @@ export default function PropiedadesPage() {
 
   return (
     <div>
-      <h1>Pagina de propiedades</h1>
-      <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
-      <div className="caja-tarjetas">
-        { propiedades.map(propiedad => <Card 
-          key={propiedad.inmueble} 
-          titulo={propiedad.titulo} 
-          descripcion={propiedad.descripcion} 
-          imagen={propiedad.image}
-        />) }
+      <div className="cabecera-filtros">
+          
+      </div>
+      <div className="lista-propiedades">
+        <h1>Pagina de propiedades</h1>
+        <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
+        <div className="caja-tarjetas">
+          { propiedades.map(propiedad => <Card 
+            key={propiedad.inmueble} 
+            titulo={propiedad.titulo} 
+            descripcion={propiedad.descripcion} 
+            imagen={propiedad.image}
+          />) }
+        </div>
       </div>
     </div>
   );
