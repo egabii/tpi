@@ -1,6 +1,7 @@
 import Card from '../../components/Card';
 import { Link } from 'react-router-dom';
 import './estilo.css';
+import FiltroPropiedades from "./FiltroPropiedades"
 
 export default function PropiedadesPage() {
 
@@ -27,15 +28,19 @@ export default function PropiedadesPage() {
 
   return (
     <div>
-      <h1>Pagina de propiedades</h1>
-      <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
-      <div className="caja-tarjetas">
-        { propiedades.map(propiedad => <Card 
-          key={propiedad.inmueble} 
-          titulo={propiedad.titulo} 
-          descripcion={propiedad.descripcion} 
-          imagen={propiedad.image}
-        />) }
+      <div className="header">
+        <FiltroPropiedades></FiltroPropiedades>
+      </div>
+      <div className="body">
+        <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
+        <div className="caja-tarjetas">
+          { propiedades.map(propiedad => <Card 
+            key={propiedad.inmueble} 
+            titulo={propiedad.titulo} 
+            descripcion={propiedad.descripcion} 
+            imagen={propiedad.image}
+          />) }
+        </div>
       </div>
     </div>
   );

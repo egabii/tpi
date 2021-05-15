@@ -4,3 +4,15 @@
   justify-content: space-between;
 }
 
+.header{
+  background-color:whitesmoke;
+}
+
+.codinm{
+  margin-top: 3%;
+}
+
+.enviar{
+  justify-content: flex-end ;
+  display: flex;
+}
