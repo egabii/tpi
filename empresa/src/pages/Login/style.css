@@ -1,33 +1,32 @@
 
 .bg-image {
-  background: url("image 1.png") no-repeat;
-  background-size: 60% 100vh;
-  position: fixed;  /* No scroll in login page */
+  background-image: url("./image_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .form-section { 
   display: flex;
   flex-direction: column;
-    height: 100vh;
-    position: relative;
-    width: 20%;
-    left: 75%;
-    top: 10%;
+  width: 60%;
+  margin: 0 auto;
 }
 .btn-margen{
   margin-top: 25px;
-  width:90% ;
 }
-.ingreso {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 50px
+
+.btn-block {
+  width: 100%;
 }
+
 .logo{
-  position: relative;
-  width: 20%;
-  height:20%;
-  left:75%;
-  top:5%;
+  margin: 20px auto;
+  display: block;
+}
+
+.row-height {
+  height: 100vh;
+}
+
+.form-group-child {
+  margin-top: 15px;
 }
