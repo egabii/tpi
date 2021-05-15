@@ -10,3 +10,7 @@
   display: flex;
   justify-content: start;
 }
+
+.padPage { 
+  padding: 0px;
+}

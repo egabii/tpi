@@ -32,7 +32,7 @@ export default function Layout({ children }) {
             <Navbar />
           </div>
         </Col>
-          <Col md={10}>
+          <Col md={10} >
             { children }
           </Col>
       </Row>
