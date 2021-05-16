@@ -2,9 +2,6 @@
 
 .bg{ 
   background-color: darkgray;
-
-
-
 }
 .titulo{ 
   display: flex; 
@@ -13,6 +10,22 @@
   margin-bottom: 40px;
   padding: 20px 0px;
 }
+
 .letra-titulo{ 
   font-size: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-appts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-appts {
+  width: 18rem;
+  margin-bottom: 10px;
 }
