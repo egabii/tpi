@@ -2,7 +2,17 @@ import { Link } from "react-router-dom";
 import PropiedadUnitaria from "../pages/Propiedades/PropiedadUnitaria";
 import Carrousel from './Carrousel.js'
 
-export default function Card ({titulo, descripcion, imagen,tipo,precio,estado}) {
+export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estado}) {
+
+  /*{Card(propUni => <PropiedadUnitaria
+    clave={propUni.key}
+    tit={propUni.titulo} 
+    descr={propUni.descripcion} 
+    img={propUni.imagen}
+    prec={propUni.precio}
+    estado={propUni.estado}
+    tipo= {propUni.tipo} />
+  )}*/;
   return (
 
     <div class="card mb-3" style={{width:'100vw'}} >
@@ -15,10 +25,10 @@ export default function Card ({titulo, descripcion, imagen,tipo,precio,estado}) 
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">{titulo}</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">{descripcion}</p>
             <p class="card-text">{precio}</p>
-            <p class="card-text"><span class="badge bg-secondary">{estado}</span></p>
             <p class="card-text">{tipo}</p>
+            <p class="card-text"><h5><span class="badge bg-success">{estado}</span></h5></p>
           </div>
         </div>
       </div>

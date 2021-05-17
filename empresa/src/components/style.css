@@ -4,3 +4,12 @@
 .border{
   border-radius: 20px;
 }
+
+.tam{
+  max-width: 480px;
+}
+
+.tamImg{
+  width: 480px;
+  height: 380px;
+}
