@@ -31,3 +31,4 @@
 /cliente/yarn-error.log*
 
 admin_static
+node_modules
