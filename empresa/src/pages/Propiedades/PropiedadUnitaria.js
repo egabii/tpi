@@ -2,19 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-export default function PropiedadUnitaria(imagen) {   
+export default function PropiedadUnitaria() {   
     return (
         <Container fluid>
             <Row>
-<<<<<<< Updated upstream
-                <Col >
-                <div>
-                    <header>
-                        <img src="https://picsum.photos/320/220" alt="" style={{backgroundSize:'cover'}}/>
-                    </header>
-                
-                </div>
-=======
                 <Col md={8}>
                     <div className="galeria" >
                     <img src="https://picsum.photos/300/250" className="imagenes" alt="..."/>
@@ -27,7 +18,7 @@ export default function PropiedadUnitaria(imagen) {
                                 <label >Estado:<button style={{marginLeft: '150px'}}  class="btn btn-primary" type="submit">Button</button></label>
                             </p>
                             <p><label>Precio:</label>
-                                <label></label>
+                                <label> </label>
                             </p>
                         <p><label>Codigo inmueble:</label></p> 
                         <p><label>Tipo:</label></p>  
@@ -38,7 +29,6 @@ export default function PropiedadUnitaria(imagen) {
                             </div>   
                         </div>
                      
->>>>>>> Stashed changes
                 </Col>
 
 
