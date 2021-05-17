@@ -9,27 +9,39 @@ export default function PropiedadesPage() {
     {
       inmueble: 1,
       titulo: 'Carri',
-      descripcion: 'Bella Vista',
+      descripcion:  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quisquam nulla, necessitatibus rem praesentium expedita ut id aliquid delectus minima iure ullam nisi quasi voluptates corporis! Labore, nobis! Nobis, autem!",
       image: 'https://picsum.photos/320/220'
     },
     {
       inmueble: 2,
       titulo: 'Gonza',
-      descripcion: 'Bella Vista',
-      image: 'https://picsum.photos/320/220'
+      descripcion:  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quisquam nulla, necessitatibus rem praesentium expedita ut id aliquid delectus minima iure ullam nisi quasi voluptates corporis! Labore, nobis! Nobis, autem!",
+      image: 'https://source.unsplash.com/random/320x220'
     },
     {
       inmueble: 3,
       titulo: 'Matias',
-      descripcion: 'Corrientes',
+      descripcion:  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quisquam nulla, necessitatibus rem praesentium expedita ut id aliquid delectus minima iure ullam nisi quasi voluptates corporis! Labore, nobis! Nobis, autem!",
       image: 'https://picsum.photos/320/220'
     }, 
     {
       inmueble: 4,
       titulo: 'Matias',
-      descripcion: 'Corrientes',
-      image: 'https://picsum.photos/320/220'
-    }
+      descripcion: "Lorem, ipsum dolor sit amet consectetur ",
+      image: 'https://source.unsplash.com/random/320x220'
+    },
+    {
+      inmueble: 5,
+      titulo: 'Matias',
+      descripcion: "Lorem, ipsum dolor sit amet consectetur ",
+      image: 'https://source.unsplash.com/random/320x220'
+    },
+    {
+      inmueble: 6,
+      titulo: 'Matias',
+      descripcion: "Lorem, ipsum dolor sit amet consectetur ",
+      image: 'https://source.unsplash.com/random/320x220'
+    },
   ];
 
   return (
