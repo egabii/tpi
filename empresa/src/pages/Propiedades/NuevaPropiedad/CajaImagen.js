@@ -3,7 +3,7 @@ import "./estiloimagen.css"
 export default function Imagenes() {
     return (
     <div class="card-group">
-        <ImagenPrincipal></ImagenPrincipal>
+        
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -22,6 +22,7 @@ export default function Imagenes() {
     );
   };
 
+/*
 const ImagenPrincipal = () => {
     return (
     <div class="card"> 
@@ -44,3 +45,4 @@ const ImagenPrincipal = () => {
     </div>
     );
   }
+*/

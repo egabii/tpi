@@ -38,7 +38,7 @@ export default function PropiedadesPage() {
         <FiltroPropiedades></FiltroPropiedades>
       </div>
       <div className="body">
-        <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
+        <Link to="/NuevaPropiedad"> Nueva Propiedad </Link>
         <div className="caja-tarjetas">
           
           { propiedades.map(propiedad => <Card 
