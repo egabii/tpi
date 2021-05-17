@@ -1,7 +1,9 @@
 import Card from '../../components/Card';
 import { Link } from 'react-router-dom';
 import './estilo.css';
-import FiltroPropiedades from "./FiltroPropiedades"
+import FiltroPropiedades from "./FiltroPropiedades";
+import Button from 'react-bootstrap/Button';
+import PropiedadUnitaria from './PropiedadUnitaria';
 
 export default function PropiedadesPage() {
 
@@ -9,37 +11,37 @@ export default function PropiedadesPage() {
     {
       inmueble: 1,
       titulo: 'Carri',
-      descripcion: 'Bella Vista',
+      descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid harum sed saepe ut voluptatum possimus maxime maiores, delectus odio exercitationem eligendi nisi cupiditate quo tempore quaerat dolore. Consectetur, iusto provident.',
       image: 'https://picsum.photos/320/220',
-      precio: '250.000',
-      estado: 'en Venta',
+      precio: '$250.000',
+      estado: 'En Venta',
       tipo: 'departamento',
     },
     {
       inmueble: 2,
       titulo: 'Gonza',
-      descripcion: 'Bella Vista',
+      descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid harum sed saepe ut voluptatum possimus maxime maiores, delectus odio exercitationem eligendi nisi cupiditate quo tempore quaerat dolore. Consectetur, iusto provident.',
       image: 'https://picsum.photos/320/220',
-      precio: '250.000',
-      estado: 'en Venta',
+      precio: '$250.000',
+      estado: 'En Venta',
       tipo: 'departamento'
     },
     {
       inmueble: 3,
       titulo: 'Matias',
-      descripcion: 'Corrientes',
+      descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid harum sed saepe ut voluptatum possimus maxime maiores, delectus odio exercitationem eligendi nisi cupiditate quo tempore quaerat dolore. Consectetur, iusto provident.',
       image: 'https://picsum.photos/320/220',
-      precio: '250.000',
-      estado: 'en Venta',
+      precio: '$250.000',
+      estado: 'En Venta',
       tipo: 'departamento'
     }, 
     {
       inmueble: 4,
       titulo: 'Matias',
-      descripcion: 'Corrientes',
+      descripcion: 'Corrientes capital la ciduadasdsada',
       image: 'https://picsum.photos/320/220',
-      precio: '250.000',
-      estado: 'en Venta',
+      precio: '$250.000',
+      estado: 'En Venta',
       tipo: 'departamento'
     }
   ];
@@ -50,9 +52,9 @@ export default function PropiedadesPage() {
         <FiltroPropiedades></FiltroPropiedades>
       </div>
       <div className="body">
-        <Link to="/NuevaPropiedad"> Nueva Propiedad </Link>
+        <Link to="/nuevaPropiedad"> <Button variant="primary">Nueva Propiedad </Button> </Link>
         <div className="caja-tarjetas">
-          
+
           { propiedades.map(propiedad => <Card 
             key={propiedad.inmueble} 
             titulo={propiedad.titulo} 
@@ -61,9 +63,7 @@ export default function PropiedadesPage() {
             precio={propiedad.precio}
             estado={propiedad.estado}
             tipo= {propiedad.tipo}
-          />) }
-
-           
+          />) },
         </div>
       </div>
     </div>
