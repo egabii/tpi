@@ -10,25 +10,37 @@ export default function PropiedadesPage() {
       inmueble: 1,
       titulo: 'Carri',
       descripcion: 'Bella Vista',
-      image: 'https://picsum.photos/320/220'
+      image: 'https://picsum.photos/320/220',
+      precio: '250.000',
+      estado: 'en Venta',
+      tipo: 'departamento',
     },
     {
       inmueble: 2,
       titulo: 'Gonza',
       descripcion: 'Bella Vista',
-      image: 'https://picsum.photos/320/220'
+      image: 'https://picsum.photos/320/220',
+      precio: '250.000',
+      estado: 'en Venta',
+      tipo: 'departamento'
     },
     {
       inmueble: 3,
       titulo: 'Matias',
       descripcion: 'Corrientes',
-      image: 'https://picsum.photos/320/220'
+      image: 'https://picsum.photos/320/220',
+      precio: '250.000',
+      estado: 'en Venta',
+      tipo: 'departamento'
     }, 
     {
       inmueble: 4,
       titulo: 'Matias',
       descripcion: 'Corrientes',
-      image: 'https://picsum.photos/320/220'
+      image: 'https://picsum.photos/320/220',
+      precio: '250.000',
+      estado: 'en Venta',
+      tipo: 'departamento'
     }
   ];
 
@@ -46,6 +58,9 @@ export default function PropiedadesPage() {
             titulo={propiedad.titulo} 
             descripcion={propiedad.descripcion} 
             imagen={propiedad.image}
+            precio={propiedad.precio}
+            estado={propiedad.estado}
+            tipo= {propiedad.tipo}
           />) }
 
            
