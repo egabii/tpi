@@ -3,16 +3,6 @@ import PropiedadUnitaria from "../pages/Propiedades/PropiedadUnitaria";
 import Carrousel from './Carrousel.js'
 
 export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estado}) {
-
-  /*{Card(propUni => <PropiedadUnitaria
-    clave={propUni.key}
-    tit={propUni.titulo} 
-    descr={propUni.descripcion} 
-    img={propUni.imagen}
-    prec={propUni.precio}
-    estado={propUni.estado}
-    tipo= {propUni.tipo} />
-  )}*/;
   return (
 
     <div class="card mb-3" style={{width:'100vw'}} >

@@ -19,24 +19,22 @@ export default function HomePage(){
       <Row>
         <Col>
             
-            <div className='header'>
+            <div className='headerH'>
             <h3>BIENVENIDO, Matias Acosta</h3>
               <Image src={logoIn} rounded className='img-log' />
             </div>
             <div className='Home'>
               <div className='actions'>
-              <Card className='bg-tareas'>
-                  <Card.Header>ULTIMAS ACCIONES</Card.Header>
-                  <Card.Body  >
+              <Card style={{background:'none'}}>
+                  <Card.Header style={{background:'#DCDCDC'}}>ULTIMAS ACCIONES</Card.Header>
+                  <Card.Body className='bg-tareas' >
                     <Card.Text>
-                      <ListGroup>
-                      <ListGroup.Item action variant="info">
-                        Venta Realizada
-                      </ListGroup.Item>
-                      <ListGroup.Item action variant="info">
-                        Alquiler Realizado
-                      </ListGroup.Item>
-                      </ListGroup>
+                    <ListGroup variant="flush" >
+                      <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                      <br />
+                      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                      <br />
+                    </ListGroup>
                     </Card.Text>
                     <Link to="/nuevaPropiedad">
                       <Button variant="success">Nueva Propiedad</Button>
@@ -58,9 +56,6 @@ export default function HomePage(){
                       </ListGroup.Item>
                       </ListGroup>
                     </Card.Text>
-                      <Link to="/nuevaPropiedad">
-                        <Button variant="success">Nueva Propiedad</Button>
-                      </Link>
                   </Card.Body>
                 </Card>
               </div>

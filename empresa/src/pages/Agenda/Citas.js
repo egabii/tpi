@@ -1,115 +1,295 @@
 
-import Table from 'react-bootstrap/Table';
-import Popup from "./componentsagenda/PopupSolicitud";
-import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Table,Button,Container,Modal,ModalBody,ModalHeader,FormGroup,ModalFooter} from 'reactstrap';
+import {useState} from 'react'
+
+
+
+
 
 const Citas = () => {
-    const solicitudes=[
-        {
-            item: 1,
-            apeyNom: 'Gonzalo Zoloaga',
-            dni: '12345678',
-            cuil: '20123456784',
-            fecnac: '21/09/2000',
-            telefono: '3777123456',
-            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
-          },
-        {
-            item: 2,
-            apeyNom: 'Gonzalo Zoloaga',
-            dni: '12345678',
-            cuil: '20123456784',
-            fecnac: '21/09/2000',
-            telefono: '3777123456',
-            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
-          },
-        {
-            item: 3,
-            apeyNom: 'Gonzalo Zoloaga',
-            dni: '12345678',
-            cuil: '20123456784',
-            fecnac: '21/09/2000',
-            telefono: '3777123456',
-            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
-          },
-        {
-            item: 4,
-            apeyNom: 'Gonzalo Zoloaga',
-            dni: '12345678',
-            cuil: '20123456784',
-            fecnac: '21/09/2000',
-            telefono: '3777123456',
-            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
-          },
-        {
-            item: 5,
-            apeyNom: 'Gonzalo Zoloaga',
-            dni: '12345678',
-            cuil: '20123456784',
-            fecnac: '21/09/2000',
-            telefono: '3777123456',
-            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a> ,
+    
+  const solicitudes=[
+    {
+        item: 1,
+        apeyNom: 'Gonzalo Zoloaga',
+        dni: '12345678',
+        cuil: '20123456784',
+        fecnac: '21/09/2000',
+        telefono: '3777123456',
+        mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+      },
+    {
+        item: 2,
+        apeyNom: 'Gonzalo Zoloaga',
+        dni: '12345678',
+        cuil: '20123456784',
+        fecnac: '21/09/2000',
+        telefono: '3777123456',
+        mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+      }
+  ];
+
+      const [citas, setcitas] = useState(solicitudes);
+      const [modalEditar, setModalEditar] = useState(false);
+      const [modalEliminar, setModalEliminar] = useState(false);
+      const [modalInsertar, setModalInsertar] = useState(false);
+
+      const [citaSeleccionada, setcitaSeleccionada] = useState({
+        item: '',
+        apeyNom: '',
+        dni: '',
+        telefono:'',
+        mail:'',
+      });
+
+      const seleccionarCita=(elemento, caso)=>{
+        setcitaSeleccionada(elemento);
+        (caso==='Editar')?setModalEditar(true):setModalEliminar(true)
           }
 
-    ];
-            const [buttonPopup, setbuttonPopup] = useState(false);
-    return (
-        <div>
-            <Table striped bordered hover>
-            <thead>
-                <tr>
-                <th>Nro</th>
-                <th>Nombre y Apellido</th>
-                <th>DNI</th>
-                <th>Mail</th>
-                <th> </th>
-                </tr>
-            </thead>
-                <tbody>
-                {solicitudes.map(solicitud =>  
-                            <tr>
-                                <th>{solicitud.item}</th>
-                                <th>{solicitud.apeyNom}</th>
-                                <th>{solicitud.dni}</th>
-                                <th>{solicitud.mail}</th>
-                                <th><btn onClick = {() => setbuttonPopup(true)}class="btn btn-primary">Ver solicitud</btn></th>
-                            </tr>
-                   )}
+          const handleChange=e=>{
+            const {name, value}=e.target;
+            setcitaSeleccionada((prevState)=>({
+              ...prevState,
+              [name]: value
+            }));
+          }
 
-                </tbody>
-                   
-           </Table>
-           <Popup trigger={buttonPopup} setTrigger={setbuttonPopup}>
-                <DatosSolicitud></DatosSolicitud>
-            </Popup>
+          const editar=()=>{
+            var dataNueva=citas;
+            dataNueva.map(cita=>{
+              if(cita.item===citaSeleccionada.item){
+                cita.apeyNom=citaSeleccionada.apeyNom;
+                cita.dni=citaSeleccionada.dni;
+                cita.telefono=citaSeleccionada.telefono;
+                cita.mail=citaSeleccionada.mail;
+              }
+            });
+            setcitas(dataNueva);
+            setModalEditar(false);
+          }
+        
+          const eliminar =()=>{
+            setcitas(citas.filter(cita=>cita.item!==citaSeleccionada.item));
+            setModalEliminar(false);
+          }
+
+          const abrirModalInsertar=()=>{
+            setcitaSeleccionada(null);
+            setModalInsertar(true);
+          }
+
+          const insertar =()=>{
+            var valorInsertar=citaSeleccionada;
+            valorInsertar.item=citas[citas.length-1].item+1;
+            var dataNueva = citas;
+            dataNueva.push(valorInsertar);
+            setcitas(dataNueva);
+            setModalInsertar(false);
+          }
+
+    return (
+        <div style={{padding:'15px'}}>
+              <button className="btn btn-success" onClick={()=>abrirModalInsertar()}>Insertar</button>
+            <br /><br />
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Nombre y Apellido</th>
+            <th>DNI</th>
+            <th>Telefono</th>
+            <th>Mail</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {citas.map(elemento=>(
+            <tr>
+              <td>{elemento.item}</td>
+              <td>{elemento.apeyNom}</td>
+              <td>{elemento.dni}</td>
+              <td>{elemento.telefono}</td>
+              <td>{elemento.mail}</td>
+              <td><button className="btn btn-primary" onClick={()=>seleccionarCita(elemento, 'Editar')}>Editar</button> {"   "} 
+              <button className="btn btn-danger" onClick={()=>seleccionarCita(elemento, 'Eliminar')}>Eliminar</button></td>
+            </tr>
+          ))
+          }
+        </tbody>
+      </table>
+
+      <Modal isOpen={modalEditar}>
+        <ModalHeader>
+          <div>
+            <h3>Editar Cita</h3>
+          </div>
+        </ModalHeader>
+        <ModalBody>
+          <div className="form-group">
+            <label>Item</label>
+            <input
+              required
+              className="form-control"
+              readOnly
+              type="text"
+              name="item"
+              value={citaSeleccionada && citaSeleccionada.item}
+            />
+            <br />
+
+            <label>Nombre y Apellido</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="apeyNom"
+              value={citaSeleccionada && citaSeleccionada.apeyNom}
+              onChange={handleChange}
+            />
+            <br />
+
+            <label>DNI</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="dni"
+              value={citaSeleccionada && citaSeleccionada.dni}
+              onChange={handleChange}
+            />
+            <label>Telefono</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="telefono"
+              value={citaSeleccionada && citaSeleccionada.telefono}
+              onChange={handleChange}
+            />
+            <label>Mail</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="mail"
+              value={citaSeleccionada && citaSeleccionada.mail}
+              onChange={handleChange}
+            />
+            <br />
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <button className="btn btn-primary" onClick={()=>editar()}>
+            Actualizar
+          </button>
+          <button
+            className="btn btn-danger"
+            onClick={()=>setModalEditar(false)}
+          >
+            Cancelar
+          </button>
+        </ModalFooter>
+      </Modal>
+
+
+      <Modal isOpen={modalEliminar}>
+        <ModalBody>
+          Estás Seguro que deseas eliminar la cita {citaSeleccionada && citaSeleccionada.item}
+        </ModalBody>
+        <ModalFooter>
+          <button className="btn btn-danger" onClick={()=>eliminar()}>
+            Sí
+          </button>
+          <button
+            className="btn btn-secondary"
+            onClick={()=>setModalEliminar(false)}
+          >
+            No
+          </button>
+        </ModalFooter>
+      </Modal>
+
+
+        <Modal isOpen={modalInsertar}>
+        <ModalHeader>
+          <div>
+            <h3>Insertar Cita</h3>
+          </div>
+        </ModalHeader>
+        <ModalBody>
+          <div className="form-group">
+            <label>Item</label>
+            <input
+              required
+              className="form-control"
+              readOnly
+              type="text"
+              name="item"
+              value={citas[citas.length-1].item+1}
+            />
+            <br />
+
+            <label>apeynom</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="apeyNom"
+              value={citaSeleccionada ? citaSeleccionada.apeyNom: ''}
+              onChange={handleChange}
+            />
+            <br />
+
+            <label>DNI</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="dni"
+              value={citaSeleccionada ? citaSeleccionada.dni: ''}
+              onChange={handleChange}
+            />
+            <br />
+            <label>telefono</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="telefono"
+              value={citaSeleccionada ? citaSeleccionada.telefono: ''}
+              onChange={handleChange}
+            />
+            <br />
+            <label>mail</label>
+            <input
+              required
+              className="form-control"
+              type="text"
+              name="mail"
+              value={citaSeleccionada ? citaSeleccionada.mail: ''}
+              onChange={handleChange}
+            />
+            <br />
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <button className="btn btn-primary"
+          onClick={()=>insertar()}>
+            Insertar
+          </button>
+          <button
+            className="btn btn-danger"
+            onClick={()=>setModalInsertar(false)}
+          >
+            Cancelar
+          </button>
+        </ModalFooter>
+      </Modal>
+    
         </div>
     )
 }
 
 export default Citas
 
-function DatosSolicitud() {
-    return(
-    <div>
-        <div>
-            <h2>Larry the Bird</h2>
-            <hr/>
-        </div>
-        <div className="body">
-            <h5>Tipo cliente: No registrado</h5>
-            <h5>Asunto: Conocer propiedad</h5>
-            <h5>Correo electronico: larrybird@gmail.com</h5>
-            <h5>Telefon: 3777257042</h5>
-            <h5>Fecha solicitud: 25/05/2021 a las 19:38</h5>
-            <h5>Codigo Propiedad: 183</h5>
-            <h5>Comentario: que se yo</h5>
-            <button class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <Link to="/agenda"><btn class="btn btn-success">Asignar agente</btn></Link>
-
-        </div>
-    </div>
-    )
-}
