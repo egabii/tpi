@@ -1,12 +1,27 @@
-export default function Card ({titulo, descripcion, imagen}) {
+import { Link } from "react-router-dom";
+import PropiedadUnitaria from "../pages/Propiedades/PropiedadUnitaria";
+import Carrousel from './Carrousel.js'
+
+export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estado}) {
   return (
-    <div class="card" style={{ width: '18rem' }}>
-      <img src={imagen} class="card-img-top" alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{ titulo }</h5>
-          <p class="card-text">{ descripcion }</p>
-          <button class="btn btn-primary">Go somewhere</button>
+
+    <div class="card mb-3" style={{width:'100vw'}} >
+      <div class="row g-0">
+        <div class="col-md-4" >
+          <Link to='/PropiedadUnitaria'>
+              <Carrousel imagenC={imagen}/>
+          </Link>
         </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{titulo}</h5>
+            <p class="card-text">{descripcion}</p>
+            <p class="card-text">{precio}</p>
+            <p class="card-text">{tipo}</p>
+            <p class="card-text"><h5><span class="badge bg-success">{estado}</span></h5></p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

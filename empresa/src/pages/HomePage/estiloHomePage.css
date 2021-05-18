@@ -6,28 +6,30 @@
     height: 100vh;
 }
 
-.header{
+.headerH{
     display: flex;
     justify-content: space-between;
     margin-top: 1px;
+    background:none;
 }
 
 .img-log{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .actions{
-    margin-top: 25%;
-    width: 55%;
+    margin-top: 150px;
+    width: 480px;
+    max-width: 580px;
 }
 .bg-tareas{
-    background-color: rgba(58, 151, 58, 0.411);
+    background-color: rgba(102, 109, 102, 0.459);
 }
 
 .agenda{
-    margin-top: 10%;
-    width: 30%;
+    margin-top: 100px;
+    width: 220px;
 }
 .Home{
     display: flex;

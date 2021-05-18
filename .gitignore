@@ -4,12 +4,17 @@
 /empresa/node_modules
 /empresa/.pnp
 /empresa/.pnp.js
+/cliente/node_modules
+/cliente/.pnp
+/cliente/.pnp.js
 
 # testing
 /empresa/coverage
+/cliente/coverage
 
 # production
 /empresa/build
+/cliente/build
 
 # misc
 .DS_Store
@@ -21,5 +26,9 @@
 /empresa/npm-debug.log*
 /empresa/yarn-debug.log*
 /empresa/yarn-error.log*
+/cliente/npm-debug.log*
+/cliente/yarn-debug.log*
+/cliente/yarn-error.log*
 
 admin_static
+node_modules

@@ -5,4 +5,32 @@
   background-color: #ff9999;
 }
 
+.header{
+  background-color:whitesmoke;
+}
 
+.codinm{
+  margin-top: 3%;
+}
+
+.enviar{
+  justify-content: flex-end ;
+  display: flex;
+}
+.imagenes{ 
+  padding-left: 10px;
+
+}
+.galeria{
+  display: flex;
+justify-content: center;
+
+
+
+}
+.labels{ 
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding-top: 0px;
+}

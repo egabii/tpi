@@ -1,3 +1,16 @@
 .pepito {
   color: red;
 }
+.border{
+  border-radius: 20px;
+}
+
+.tam{
+  max-width: 480px;
+  max-height: 380px;
+}
+
+.tamImg{
+  width: 400px;
+  height: 300px;
+}

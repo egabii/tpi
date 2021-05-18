@@ -1,0 +1,18 @@
+.bg-home-image {
+  background-image: url("../assets//chalet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 446px;
+  color: #fff;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .bg-home-image > .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: transparent;
+  }
+}

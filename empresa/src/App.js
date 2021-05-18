@@ -1,19 +1,22 @@
+import { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Redirect,
-  Route
+  Route,
+  useHistory
 } from "react-router-dom";
 import { ProvideAuth, useAuth } from './contexts/AuthContext';
 import HomePage from './pages/HomePage/HomePage';
 import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
-import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
-import AgendaPage from './pages/Agenda/AgendaPage';
+import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad';
+import Agenda from './pages/Agenda/Agenda';
 import LoginPage from './pages/Login/LoginPage';
 import CajaDeVenta from './pages/CajaDeVenta/Caja';
 import CierreDeCaja from './pages/CierreDeCaja/Cierre';
 import NuevoReporte from './pages/NuevoReporte/Reporte';
 import Layout from './layout/Layout';
+import PropiedadUnitaria from './pages/Propiedades/PropiedadUnitaria';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PrivateRoute({ children, ...rest }) {
@@ -38,6 +41,12 @@ function PrivateRoute({ children, ...rest }) {
 };
 
 function ProtectedPage() {
+  let history = useHistory();
+
+  useEffect(() => {
+    history.push('/home');
+  }, []);
+
   return (
     <Layout>
       <Switch>
@@ -48,19 +57,13 @@ function ProtectedPage() {
           <PropiedadesPage />
         </Route>
         <Route exact path="/agenda">
-          <AgendaPage />
+          <Agenda />
         </Route>
         <Route exact path="/nuevaPropiedad">
           <NuevaPropiedad />
         </Route>
-         <Route exact path="/CajaDeVenta">
-          <CajaDeVenta/>
-        </Route>
-         <Route exact path="/CierreDeCaja">
-          <CierreDeCaja/>
-        </Route>
-         <Route exact path="/NuevoReporte">
-          <NuevoReporte/>
+        <Route exact path= "/PropiedadUnitaria"> 
+          <PropiedadUnitaria/>
         </Route>
       </Switch>
     </Layout>
