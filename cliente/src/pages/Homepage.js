@@ -57,10 +57,10 @@ export default function Homepage(){
         </Form>
       </section>
     </div>
-    <Container>
+    <Container >
       <Row>
         <Col sm={12}>
-          <h1>Home page</h1>
+            
         </Col>
       </Row>
     </Container>
