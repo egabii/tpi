@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   return (
     <Container fluid>
       <Row>
-        <Col md={2} className="bg-dark" >
+        <Col md={2} className="bg-dark"  >
           <div className="d-flex flex-column p-3 text-white bg-dark" style={{ height: '100vh'}}>
           <img src={logoIn} alt="logo domus" />
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">

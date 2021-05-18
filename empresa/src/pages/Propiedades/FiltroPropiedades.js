@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 function FiltroPropiedades() {
     return (
-        <div>
+        <div style={{marginTop:'25px'}}>
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                   <label for="validationCustom01" class="form-label">Provincia</label>
