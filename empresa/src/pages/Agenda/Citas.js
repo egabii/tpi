@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table';
 import Popup from "./componentsagenda/PopupSolicitud";
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import AgendaPage from './AgendaPage'
 
 const Citas = () => {
     const solicitudes=[
@@ -50,8 +51,107 @@ const Citas = () => {
             fecnac: '21/09/2000',
             telefono: '3777123456',
             mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a> ,
-          }
-
+          },
+        {
+            item: 1,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 2,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 3,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 4,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 5,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a> ,
+          },
+        {
+            item: 1,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 2,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 3,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 4,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+        {
+            item: 5,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a> ,
+          },
+        {
+            item: 1,
+            apeyNom: 'Gonzalo Zoloaga',
+            dni: '12345678',
+            cuil: '20123456784',
+            fecnac: '21/09/2000',
+            telefono: '3777123456',
+            mail: <a href="mailto:gonzalozoloaga44@gmail.com">gonzalozoloaga44@gmail.com</a>,
+          },
+  
     ];
             const [buttonPopup, setbuttonPopup] = useState(false);
     return (
@@ -81,7 +181,7 @@ const Citas = () => {
                    
            </Table>
            <Popup trigger={buttonPopup} setTrigger={setbuttonPopup}>
-                <DatosSolicitud></DatosSolicitud>
+                <DatosSolicitud ></DatosSolicitud>
             </Popup>
         </div>
     )
@@ -104,10 +204,8 @@ function DatosSolicitud() {
             <h5>Fecha solicitud: 25/05/2021 a las 19:38</h5>
             <h5>Codigo Propiedad: 183</h5>
             <h5>Comentario: que se yo</h5>
-            <button class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <Link to="/agenda"><btn class="btn btn-success">Asignar agente</btn></Link>
+            <Link to="/agenda"><btn class="btn btn-success">Asignar agente</btn>
+            </Link>
 
         </div>
     </div>

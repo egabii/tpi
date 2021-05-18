@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Navbar from '../components/Navbar';
 import './style.css';
-
+import logoIn from "../pages/HomePage/logoIn.jpeg";
 export default function Layout({ children }) {
 
   return (
@@ -12,13 +12,13 @@ export default function Layout({ children }) {
       <Row>
         <Col md={2} className="bg-dark" >
           <div className="d-flex flex-column p-3 text-white bg-dark" style={{ height: '100vh'}}>
-            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-              <span className="fs-4">DOMUS 2.0</span>
+          <img src={logoIn} alt="logo domus" />
+            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             </a>
             <hr />
-            <Dropdown>
+            <Dropdown  >
               <Dropdown.Toggle variant="dark" id="dropdown-basic">
-                <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
+                <img src="https://i.blogs.es/802389/steve-jobs-1/1366_2000.jpg" alt="" width="32" height="32" className="rounded-circle me-2" />
                 <strong>SUPER USER</strong>
               </Dropdown.Toggle>
               <Dropdown.Menu>
