@@ -26,7 +26,8 @@ export default function PropiedadesPage() {
   ];
 
   return (
-    <h1>Marce y Franco</h1>
+    <div>
+    
     <div>
       <h1>Pagina de propiedades</h1>
       <Link to="/nuevaPropiedad"> Nueva Propiedad </Link>
@@ -38,6 +39,7 @@ export default function PropiedadesPage() {
           imagen={propiedad.image}
         />) }
       </div>
+    </div>
     </div>
   );
 }

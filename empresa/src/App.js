@@ -10,6 +10,9 @@ import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
 import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
 import AgendaPage from './pages/Agenda/AgendaPage';
 import LoginPage from './pages/Login/LoginPage';
+import CajaDeVenta from './pages/CajaDeVenta/Caja';
+import CierreDeCaja from './pages/CierreDeCaja/Cierre';
+import NuevoReporte from './pages/NuevoReporte/Reporte';
 import Layout from './layout/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -49,6 +52,15 @@ function ProtectedPage() {
         </Route>
         <Route exact path="/nuevaPropiedad">
           <NuevaPropiedad />
+        </Route>
+         <Route exact path="/CajaDeVenta">
+          <CajaDeVenta/>
+        </Route>
+         <Route exact path="/CierreDeCaja">
+          <CierreDeCaja/>
+        </Route>
+         <Route exact path="/NuevoReporte">
+          <NuevoReporte/>
         </Route>
       </Switch>
     </Layout>
