@@ -9,7 +9,7 @@ export default function Homepage(){
     if (e) {
       e.preventDefault();
     }
-    history.push('/catalogo')
+    history.push('/catalogo');
   }
   return (
     <>
@@ -62,7 +62,7 @@ export default function Homepage(){
                 aria-label="Ubicacion" 
                 placeholder="Localidad, Provincia, ..." 
               />
-              <Button variant="primary" type="submit" className="domus-color">
+              <Button variant="primary" type="submit" className="domus-btn">
                 Buscar
               </Button>
               </div>

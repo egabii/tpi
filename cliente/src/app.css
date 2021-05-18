@@ -4,7 +4,11 @@
 
 .domus-color {
   background: var(--domus-color);
-  border: var(--domus-color);
+}
+
+.domus-btn:hover, .domus-btn, .domus-btn:active {
+  background-color: var(--domus-color);
+  border-color: var(--domus-color);
 }
 
 .truncate {
@@ -25,4 +29,8 @@
 .label-checked input[type="radio"] {
   position: absolute;
   visibility: hidden;
+}
+
+.label-checked input[type="radio"] + label {
+ cursor: pointer;
 }
