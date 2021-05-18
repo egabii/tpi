@@ -7,7 +7,7 @@ export default function Catalogo () {
     <Container>
       <Row>
         <Col md={12}>
-          { propiedades.map(propiedad => <CardPropiedad key={propiedad.id} propiedad={propiedad} />) }
+          { propiedades.map(propiedad => <CardPropiedad key={propiedad.id} propiedad={propiedad} horizontal />) }
         </Col>
       </Row>
     </Container>

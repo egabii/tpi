@@ -1,0 +1,28 @@
+:root {
+  --domus-color: #13a013;
+}
+
+.domus-color {
+  background: var(--domus-color);
+  border: var(--domus-color);
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text-small {
+  font-size: 14px;
+}
+
+.label-checked input[type="radio"]:checked + label {
+  border-bottom: 3px solid var(--domus-color);
+}
+
+.label-checked input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}

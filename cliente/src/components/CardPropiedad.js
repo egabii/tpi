@@ -1,8 +1,10 @@
 
 import imagen from  '../assets/edificio.avif';
 import Image from 'react-bootstrap/Image';
+import propiedades from '../models/propiedades';
 
-export default function Card ({propiedad}) {
+const HorizontalCard = ({ propiedad }) => {
+
   return (
     <div className="card mb-3" >
       <div className="row g-0">
@@ -28,5 +30,28 @@ export default function Card ({propiedad}) {
         </div>
       </div>
     </div>
+  )
+}
+
+const VerticalCard = ({ propiedad }) => {
+  return (
+    <div className="card" style={{width: '18rem'}}>
+      <Image src={imagen} fluid />
+      <div className="card-body">
+        <h3 className="card-title">{propiedad.precio}</h3>
+        <p className="card-text">{`${propiedad.ubicacion.direccion}, ${propiedad.ubicacion.localidad}`}</p>
+        <p className="card-text card-text-small">{propiedad.descripcion_corta}</p>
+      </div>
+    </div>
+  )
+}
+
+export default function CardPropiedad ({propiedad, horizontal}) {
+  return (
+    <>
+    { horizontal 
+    ? <HorizontalCard propiedad={propiedad} /> 
+    : <VerticalCard propiedad={propiedad} /> }
+    </>
   )
 }

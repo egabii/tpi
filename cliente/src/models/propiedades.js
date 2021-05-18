@@ -5,7 +5,7 @@ const propiedades = [
     habitaciones: 2,
     banios: 1,
     espacio: 20,
-    tipo:'Local',
+    tipo: 'Local',
     antiguedad: '20 anios',
     sevicios: ['internet', 'electricidad', 'gas natural'],
     ubicacion: {
@@ -19,6 +19,7 @@ const propiedades = [
       codigoPostal: 3500
     },
     imagen: '../assets/edificio.avif',
+    descripcion_corta: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales',
     descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales. Etiam et dignissim massa. Maecenas sed diam id felis porttitor hendrerit. Donec ultricies condimentum tincidunt.'
   },
   {
@@ -27,7 +28,7 @@ const propiedades = [
     habitaciones: 2,
     banios: 1,
     espacio: 20,
-    tipo:'Local',
+    tipo: 'Local',
     antiguedad: '20 anios',
     sevicios: ['internet', 'electricidad', 'gas natural'],
     ubicacion: {
@@ -41,6 +42,7 @@ const propiedades = [
       codigoPostal: 3500
     },
     imagen: '../assets/edificio.avif',
+    descripcion_corta: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales',
     descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales. Etiam et dignissim massa. Maecenas sed diam id felis porttitor hendrerit. Donec ultricies condimentum tincidunt.'
   },
   {
@@ -49,7 +51,7 @@ const propiedades = [
     habitaciones: 2,
     banios: 1,
     espacio: 20,
-    tipo:'Local',
+    tipo: 'Local',
     antiguedad: '20 anios',
     sevicios: ['internet', 'electricidad', 'gas natural'],
     ubicacion: {
@@ -63,6 +65,7 @@ const propiedades = [
       codigoPostal: 3500
     },
     imagen: '../assets/edificio.avif',
+    descripcion_corta: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales',
     descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit sapien ac sapien elementum sodales. Etiam et dignissim massa. Maecenas sed diam id felis porttitor hendrerit. Donec ultricies condimentum tincidunt.'
   }
 ];
