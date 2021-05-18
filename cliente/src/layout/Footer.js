@@ -22,7 +22,7 @@ export default function Footer(){
           <div class="col-md-3 col-sm-6 col-xs-12">
             <h4>Direccion</h4>
             <ul>
-              <li class="list-unstyled">PASAJE FRENCH 414</li>
+              <li class="list-unstyled"><h6>PASAJE FRENCH 414</h6></li>
             </ul>
           </div>
 
