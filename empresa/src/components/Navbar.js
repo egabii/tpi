@@ -44,11 +44,11 @@ export default function Navbar() {
    
       
       <Nav.Item as="li">
-      <Link to={`/cajadeventa`} className="nav-link text-white">Caja de Venta</Link>
+      <Link to={`/CajaVenta`} className="nav-link text-white">Caja de Venta</Link>
       </Nav.Item>
 
         <Nav.Item as="li">
-      <Link to={`/CierreDeCaja`} className="nav-link text-white">Cierre de Cajas</Link>
+      <Link to={`/CierreCajas`} className="nav-link text-white">Cierre de Cajas</Link>
       </Nav.Item>
 
      

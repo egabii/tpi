@@ -65,6 +65,15 @@ function ProtectedPage() {
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
         </Route>
+        <Route exact path= "/CajaVenta"> 
+          <CajaDeVenta/>
+        </Route>
+        <Route exact path= "/CierreCajas"> 
+          <CierreDeCaja/>
+        </Route>
+        <Route exact path= "/NuevoReporte"> 
+          <NuevoReporte/>
+        </Route>
       </Switch>
     </Layout>
   );
