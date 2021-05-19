@@ -6,7 +6,7 @@ export default function Layout({ children }){
   return (
   <>
     <Header />
-    <main class="flex-shrink-0">
+    <main className="flex-shrink-0">
       { children }
     </main>
     <Footer />
