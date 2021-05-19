@@ -13,8 +13,9 @@
 }
 
 .enviar{
-  justify-content: flex-end ;
+  justify-content: space-between;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .galery{

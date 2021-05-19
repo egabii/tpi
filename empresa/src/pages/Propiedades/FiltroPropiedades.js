@@ -83,8 +83,9 @@ function FiltroPropiedades() {
                   </div>
                 </div>
                 <div class="col-12 enviar">
+                  <Link to="/NuevaPropiedad/Propietario"> <button class="btn btn-success">Nueva Propiedad </button> </Link>
                   <Link to="/propiedades">
-                    <button class="btn btn-primary">Buscar</button> 
+                    <button class="btn btn-success">Buscar</button> 
                   </Link>
                   
                 </div>

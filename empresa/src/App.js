@@ -20,7 +20,10 @@ import Documentacion from './pages/Cliente/Documentacion'
 import FormPropietario from './components/FormularioPropietario';
 import FormDescripcion from './components/FormularioDescripcion';
 import AgregarMultimedia from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
-import ListarClientes from './pages/Cliente/ListarClientes'
+import ListarClientes from './pages/Cliente/ListarClientes';
+import CajaDeVenta from './pages/CajaDeVenta/Caja';
+import CierreDeCaja from './pages/CierreDeCaja/Cierre';
+import NuevoReporte from './pages/NuevoReporte/Reporte';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PrivateRoute({ children, ...rest }) {
@@ -68,6 +71,15 @@ function ProtectedPage() {
         </Route>
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
+        </Route>
+        <Route exact path= "/CajaVenta"> 
+          <CajaDeVenta/>
+        </Route>
+        <Route exact path= "/CierreCajas"> 
+          <CierreDeCaja/>
+        </Route>
+        <Route exact path= "/NuevoReporte"> 
+          <NuevoReporte/>
         </Route>
         <Route exact path="/AñadirCliente">
           <AñadirCliente/>

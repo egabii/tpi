@@ -60,6 +60,19 @@ export default function Navbar() {
         </Dropdown>      
       </Nav.Item>
       <Nav.Item as="li">
+      <Link to={"/CajaVenta"} className="nav-link text-white">Caja de Venta</Link>
+      </Nav.Item>
+      <Nav.Item as="li">
+      <Link to={"/CierreCajas"} className="nav-link text-white">Cierre de Cajas</Link>
+      </Nav.Item>
+
+
+
+       <Nav.Item as="li">
+      <Link to={"/NuevoReporte"} className="nav-link text-white">Nuevo Reporte</Link>
+      </Nav.Item>
+      
+      <Nav.Item as="li">
         <div>
           <a href="#" onClick={signout} className="nav-link text-light  btn-outline-primary"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16" style={{marginRight:'10px'}}>
