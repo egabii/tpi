@@ -13,7 +13,11 @@ import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad';
 import Agenda from './pages/Agenda/Agenda';
 import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
+import FormUbicacion from './components/FormularioUbicacion';
 import PropiedadUnitaria from './pages/Propiedades/PropiedadUnitaria';
+import FormPropietario from './components/FormularioPropietario';
+import FormDescripcion from './components/FormularioDescripcion';
+import AgregarMultimedia from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PrivateRoute({ children, ...rest }) {
@@ -61,6 +65,18 @@ function ProtectedPage() {
         </Route>
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
+        </Route>
+        <Route exact path= "/NuevaPropiedad/Propietario"> 
+          <FormPropietario/>
+        </Route>
+        <Route exact path= "/NuevaPropiedad/Ubicacion"> 
+          <FormUbicacion/>
+        </Route>
+        <Route exact path= "/NuevaPropiedad/Descripcion"> 
+          <FormDescripcion/>
+        </Route>
+        <Route exact path= "/NuevaPropiedad/AgregarMultimedia"> 
+          <AgregarMultimedia/>
         </Route>
       </Switch>
     </Layout>

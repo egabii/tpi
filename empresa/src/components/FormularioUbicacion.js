@@ -1,8 +1,14 @@
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 export default function FormUbicacion () {
   return (
+    <div>
+    <NuevaPropiedad/>
     <Form>
       <Form.Row className="form-row">
         <Col md={3} className="my-1">
@@ -64,6 +70,28 @@ export default function FormUbicacion () {
         </Form.Group>
         </Col>
       </Form.Row>
+      <Link to= '/NuevaPropiedad/Propietario'><Button>Anterior</Button></Link>
+      <Link to='/NuevaPropiedad/Descripcion'><Button>Siguiente</Button></Link>
     </Form>
+    </div>
   );
 };
+
+export  function NuevaPropiedad() {
+  return (
+    <>
+    <h1>Nueva Propiedad</h1>
+    <h3>Ingresar datos</h3>
+    <Tabs defaultActiveKey="ubicacion"  id="uncontrolled-tab-example">
+      <Tab eventKey="propietario" title="Propietario">
+      </Tab>
+      <Tab eventKey="ubicacion" title="Ubicacion">
+      </Tab>
+      <Tab eventKey="descripcion" title="Descripcion">
+      </Tab>
+      <Tab eventKey="multimedia" title="Multimedia">
+      </Tab>
+    </Tabs>
+    </>
+  );
+}
