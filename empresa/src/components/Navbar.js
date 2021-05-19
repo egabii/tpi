@@ -41,6 +41,23 @@ export default function Navbar() {
         </svg>
           Agenda</Link>
       </Nav.Item>
+     
+   
+      
+      <Nav.Item as="li">
+      <Link to={`/CajaVenta`} className="nav-link text-white">Caja de Venta</Link>
+      </Nav.Item>
+
+        <Nav.Item as="li">
+      <Link to={`/CierreCajas`} className="nav-link text-white">Cierre de Cajas</Link>
+      </Nav.Item>
+
+     
+
+       <Nav.Item as="li">
+      <Link to={`/NuevoReporte`} className="nav-link text-white">Nuevo Reporte</Link>
+      </Nav.Item>
+
       <Nav.Item as="li">
         <Dropdown>
           <Dropdown.Toggle className='nav-link text-light ' variant='dark' id='dropdown-basic'>

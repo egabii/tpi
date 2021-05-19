@@ -12,6 +12,9 @@ import PropiedadesPage from './pages/Propiedades/PropiedadesPage';
 import NuevaPropiedad from './pages/Propiedades/NuevaPropiedad';
 import Agenda from './pages/Agenda/Agenda';
 import LoginPage from './pages/Login/LoginPage';
+import CajaDeVenta from './pages/CajaDeVenta/Caja';
+import CierreDeCaja from './pages/CierreDeCaja/Cierre';
+import NuevoReporte from './pages/NuevoReporte/Reporte';
 import Layout from './layout/Layout';
 import FormUbicacion from './components/FormularioUbicacion';
 import PropiedadUnitaria from './pages/Propiedades/PropiedadUnitaria';
@@ -68,6 +71,15 @@ function ProtectedPage() {
         </Route>
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
+        </Route>
+        <Route exact path= "/CajaVenta"> 
+          <CajaDeVenta/>
+        </Route>
+        <Route exact path= "/CierreCajas"> 
+          <CierreDeCaja/>
+        </Route>
+        <Route exact path= "/NuevoReporte"> 
+          <NuevoReporte/>
         </Route>
         <Route exact path="/AñadirCliente">
           <AñadirCliente/>
