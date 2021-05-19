@@ -16,3 +16,26 @@
     background: transparent;
   }
 }
+
+.form-group-center, .form-group-start {
+  width: 640px;
+  display: flex;
+}
+.form-group-center {
+  justify-content: space-between;
+}
+
+.form-group-start {
+  justify-content: flex-start;
+}
+
+.form-group-center .form-group-item {
+  flex-basis: 40%;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}

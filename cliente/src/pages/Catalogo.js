@@ -1,15 +1,20 @@
 import { Row, Container, Col } from 'react-bootstrap';
-import CardPropiedad  from '../components/CardPropiedad';
+import CardPropiedad from '../components/CardPropiedad';
+import FilterPropiedades from '../components/FilterPropiedades';
 import propiedades from '../models/propiedades';
-export default function Catalogo () {
+import './catalogo.css';
 
+export default function Catalogo() {
   return (
-    <Container>
+    <Container className="padding-top-75">
       <Row>
-        <Col md={12}>
-          { propiedades.map(propiedad => <CardPropiedad key={propiedad.id} propiedad={propiedad} />) }
+        <Col sm={3}>
+          <FilterPropiedades />
+        </Col>
+        <Col md={9}>
+          {propiedades.map(propiedad => <CardPropiedad key={propiedad.id} propiedad={propiedad} horizontal />)}
         </Col>
       </Row>
-    </Container>
+    </Container >
   );
 }

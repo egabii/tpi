@@ -55,7 +55,7 @@ export default function PropiedadesPage() {
         <FiltroPropiedades></FiltroPropiedades>
       </div>
       <div className="body">
-        <Link to="/nuevaPropiedad"> <Button variant="primary">Nueva Propiedad </Button> </Link>
+        <Link to="/NuevaPropiedad/Propietario"> <Button variant="primary">Nueva Propiedad </Button> </Link>
         <div className="caja-tarjetas">
 
           { propiedades.map(propiedad => <Card 
