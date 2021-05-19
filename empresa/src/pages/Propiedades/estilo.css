@@ -1,8 +1,7 @@
-.uncontrolled-tab-example {
+.caja-tarjetas {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #ff9999;
 }
 
 .header{

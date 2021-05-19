@@ -5,8 +5,6 @@ import FiltroPropiedades from "./FiltroPropiedades";
 import Button from 'react-bootstrap/Button';
 import PropiedadUnitaria from './PropiedadUnitaria';
 
-
-
 export default function PropiedadesPage() {
 
   const propiedades = [
@@ -49,7 +47,6 @@ export default function PropiedadesPage() {
   ];
 
   return (
-    <>
     <div>
       <div className="header">
         <FiltroPropiedades></FiltroPropiedades>
@@ -69,6 +66,6 @@ export default function PropiedadesPage() {
           />) },
         </div>
       </div>
-    </div></>
+    </div>
   );
 }
