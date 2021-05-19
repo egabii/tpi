@@ -9,11 +9,11 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            <li className="nav-item">
               <Link className="nav-link" to="/catalogo">Catalogo</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/acerca">Acerca de la empresa</Link>
+              <Link className="nav-link" to="/nosotros">Acerca de la empresa</Link>
             </li>
           </ul>
         </div>

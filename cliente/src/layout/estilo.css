@@ -11,3 +11,13 @@
 main {
   margin-bottom: 30px;
 }
+
+.social-networks {
+  width: 125px;
+  font-size: 24px;
+}
+
+.justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
