@@ -19,7 +19,7 @@ export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estad
             <p class="card-text">{descripcion}</p>
             <p class="card-text">{precio}</p>
             <p class="card-text">{tipo}</p>
-            <p class="card-text"><h5><span class="badge bg-success">{estado}</span></h5></p>
+            <p class="card-text"><h5><span class="badge text-light bg-success">{estado}</span></h5></p>
           </div>
         </div>
       </div>

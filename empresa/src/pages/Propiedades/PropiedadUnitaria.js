@@ -42,20 +42,21 @@ const PropiedadUnitaria = () => {
                     </div>
                     <div className='addImg'>
                       <AppImagen/>
+                      
                     </div>      
                 </section>
                 <hr />
                 <section style={{display:'flex',flexDirection:'column', fontSize:'18px'}}>
                 <h2>Datos Propiedad</h2>
-                        <label >Estado: <button style={{marginLeft: '150px'}}  class="btn btn-primary" type="submit">Editar estado</button></label>
-                        <label>Precio:</label> 
-                        <label>Codigo inmueble: </label>
-                        <label>Tipo:</label>
-                        <label>Ubicacion</label>
-                        <label>Antiguedad:</label>
-                        <label>Elementos:</label>
-                        <label>Servicios Adheridos</label>
-                        
+                        <label >Estado: <span class="badge badge-success">En venta</span>  <button style={{marginLeft: '150px'}}  class="btn-sm btn btn-primary" type="submit">Editar</button><button style={{marginLeft: '150px'}}  class="btn-sm btn btn-success" type="submit">Guardar</button></label>
+                        <label>Precio: <strong>$2.500.000</strong> </label> 
+                        <label>Codigo inmueble: <strong> 0087</strong> </label>
+                        <label>Tipo: <strong>Chalet</strong> </label>
+                        <label>Ubicacion: <strong>Zona centro</strong> </label>
+                        <label>Antiguedad: <strong>10 años</strong> </label>
+                        <label>Elementos: <strong>No amueblado</strong> </label>
+                        <label>Servicios Adheridos: <strong>Luz y Agua</strong> </label>
+
                 </section>
                 <hr />
                    

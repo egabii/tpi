@@ -6,7 +6,7 @@ function FiltroPropiedades() {
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                   <label for="validationCustom01" class="form-label">Provincia</label>
-                  <select class="form-select" id="validationCustom04" required>
+                  <select class="form-control form-select" id="validationCustom04" required>
                     <option>Todos</option>
                     <option>Buenos Aires</option>
                     <option>Capital Federal</option>
@@ -39,7 +39,7 @@ function FiltroPropiedades() {
                 </div>
                 <div class="col-md-4">
                   <label for="validationCustom02" class="form-label">Tipo</label>
-                  <select class="form-select" id="validationCustom04" required>
+                  <select class="form-control" id="validationCustom04" required>
                     <option>Todos</option>
                     <option>Departamento</option>
                     <option>Casa</option>
@@ -55,7 +55,7 @@ function FiltroPropiedades() {
                 </div>
                 <div class="col-md-4">
                   <label for="validationCustom02" class="form-label">Estado</label>
-                  <select class="form-select" id="validationCustom04" required>
+                  <select class="form-control form-select" id="validationCustom04" required>
                     <option>Todos</option>
                     <option>En venta</option>
                     <option>En alquiler</option>
