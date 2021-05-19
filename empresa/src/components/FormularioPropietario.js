@@ -6,9 +6,13 @@ import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import InputGroup from 'react-bootstrap/Form'
-import {render} from 'react-dom';
+import { useHistory } from "react-router-dom";
 
 export default function FormPropietario () {
+  let history=useHistory();
+  function handleClick(){
+    history.push("/NuevaPropiedad/Ubicacion")
+  }
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -17,7 +21,9 @@ export default function FormPropietario () {
       event.preventDefault();
       event.stopPropagation();
     }
-
+    else{
+      handleClick()
+    }
     setValidated(true);
   };
   return (
@@ -34,7 +40,7 @@ export default function FormPropietario () {
           <Col md={3} className="my-1">
           <Form.Group controlId="TipoCliente">
             <Form.Label>Tipo de Cliente</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select" required>
               <option>Corporativo</option>
               <option>Particular</option>
             </Form.Control>
@@ -43,7 +49,7 @@ export default function FormPropietario () {
           <Col md={3} className="my-1">
           <Form.Group controlId="nombreCompleto">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" placeholder="nombre completo" />
+            <Form.Control type="text" placeholder="Nombre completo" required/>
           </Form.Group>
           </Col>
         </Form.Row>
@@ -51,19 +57,19 @@ export default function FormPropietario () {
           <Col md={3}>
           <Form.Group controlId="dniCliente">
             <Form.Label>DNI</Form.Label>
-            <Form.Control type="text" placeholder="33091229" />
+            <Form.Control type="number" placeholder="33091229" required/>
           </Form.Group>
           </Col>
           <Col md={3}>
           <Form.Group controlId="email">
-            <Form.Label>DNI</Form.Label>
-            <Form.Control type="email" placeholder="ejemplo@ejemplo.com" />
+            <Form.Label>Correo</Form.Label>
+            <Form.Control type="email" placeholder="ejemplo@ejemplo.com" required/>
           </Form.Group>
           </Col>
           <Col md={3}>
           <Form.Group controlId="direccion">
             <Form.Label>Direccion</Form.Label>
-            <Form.Control type="text" placeholder="ejemplo@ejemplo.com" />
+            <Form.Control type="text" placeholder="Avenida Siempre Viva" required/>
           </Form.Group>
           </Col>
         </Form.Row>
@@ -71,15 +77,15 @@ export default function FormPropietario () {
           <Col md={3}>
             <Form.Group controlId="tipoContrato">
               <Form.Label>Tipo de Contrato</Form.Label>
-              <Form.Control as="select">
-                <option>Corporativo</option>
-                <option>Particular</option>
+              <Form.Control as="select" required>
+                <option>Venta</option>
+                <option>Alquiler</option>
               </Form.Control>
             </Form.Group>
           </Col>
         </Form.Row>
         <div className="btn-siguiente"> 
-          <Link to='/NuevaPropiedad/Ubicacion'><Button>Siguiente</Button></Link>
+          <Button type='submit'>Siguiente</Button>
         </div>
       </Form>
     </div>

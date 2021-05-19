@@ -4,29 +4,48 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { useHistory } from "react-router-dom";
+import {useState} from 'react';
 
 export default function FormUbicacion () {
+  let history=useHistory();
+  function handleClick(){
+    history.push("/NuevaPropiedad/Descripcion")
+  }
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    else{
+      handleClick()
+    }
+    setValidated(true);
+  };
   return (
     <div>
     <NuevaPropiedad/>
-    <Form>
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Row className="form-row">
         <Col md={3} className="my-1">
         <Form.Group controlId="pais">
           <Form.Label>Pais</Form.Label>
-          <Form.Control type="text" placeholder="Argentina" />
+          <Form.Control type="text" placeholder="Argentina" required/>
         </Form.Group>
         </Col>
         <Col md={3} className="my-1">
         <Form.Group controlId="provincia">
           <Form.Label>Provincia</Form.Label>
-          <Form.Control type="text" placeholder="Chaco" />
+          <Form.Control type="text" placeholder="Chaco" required/>
         </Form.Group>
         </Col>
         <Col md={3} className="my-1">
         <Form.Group controlId="codPostal">
           <Form.Label>Codigo Postal</Form.Label>
-          <Form.Control type="text" placeholder="3500" />
+          <Form.Control type="text" placeholder="3500" required/>
         </Form.Group>
         </Col>
       </Form.Row>
@@ -34,7 +53,7 @@ export default function FormUbicacion () {
         <Col md={3}>
         <Form.Group controlId="localidad">
           <Form.Label>Locaidad</Form.Label>
-          <Form.Control type="text" placeholder="La Leonesa" />
+          <Form.Control type="text" placeholder="La Leonesa" required/>
         </Form.Group>
         </Col>
         <Col md={3}>
@@ -46,7 +65,7 @@ export default function FormUbicacion () {
         <Col md={3}>
         <Form.Group controlId="direccion">
           <Form.Label>Direccion</Form.Label>
-          <Form.Control type="text" placeholder="ejemplo@ejemplo.com" />
+          <Form.Control type="text" placeholder="ejemplo@ejemplo.com" required/>
         </Form.Group>
         </Col>
       </Form.Row>
@@ -54,7 +73,7 @@ export default function FormUbicacion () {
         <Col md={3}>
         <Form.Group controlId="calle">
           <Form.Label>Calle</Form.Label>
-          <Form.Control type="text" placeholder="Calle falsa 123" />
+          <Form.Control type="text" placeholder="Calle falsa 123" required/>
         </Form.Group>
         </Col>
         <Col md={3}>
@@ -65,14 +84,14 @@ export default function FormUbicacion () {
         </Col>
         <Col md={3}>
         <Form.Group controlId="nroDepto">
-          <Form.Label>Numero</Form.Label>
+          <Form.Label>Numero Depto</Form.Label>
           <Form.Control type="text" placeholder="9" />
         </Form.Group>
         </Col>
       </Form.Row>
       <div className="btn-desplazo">
       <Link to= '/NuevaPropiedad/Propietario'><Button>Anterior</Button></Link>
-      <Link to='/NuevaPropiedad/Descripcion'><Button>Siguiente</Button></Link>
+      <Button type='submit'>Siguiente</Button>
       </div>
     </Form>
     </div>

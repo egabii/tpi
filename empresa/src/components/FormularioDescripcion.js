@@ -5,34 +5,43 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-
+import { useHistory } from "react-router-dom";
+import {useState} from 'react';
 
 export default function FormDescripcion () {
-  
+  let history=useHistory();
+  function handleClick(){
+    history.push("/NuevaPropiedad/Descripcion")
+  }
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    else{
+      handleClick()
+    }
+    setValidated(true);
+  };
   return (
     <div>
       <NuevaPropiedad/>
       <Form required>
         <Form.Row className="form-row">
-          <Col md={3} className="my-1">
+          <Col md={5} className="my-1">
           <Form.Group controlId="nroCliente">
-            <Form.Label>Nro de Cliente</Form.Label>
-            <Form.Control type="text" placeholder="Numero de cliente" />
+            <Form.Label>Titulo</Form.Label>
+            <Form.Control type="text" />
           </Form.Group>
           </Col>
           <Col md={3} className="my-1">
           <Form.Group controlId="TipoCliente">
-            <Form.Label>Tipo de Cliente</Form.Label>
-            <Form.Control as="select">
-              <option>Corporativo</option>
-              <option>Particular</option>
+            <Form.Label>Precio</Form.Label>
+            <Form.Control type="number" min="0">
             </Form.Control>
-          </Form.Group>
-          </Col>
-          <Col md={3} className="my-1">
-          <Form.Group controlId="nombreCompleto">
-            <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" placeholder="nombre completo" />
           </Form.Group>
           </Col>
         </Form.Row>
