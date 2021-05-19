@@ -41,8 +41,9 @@
 
 .search-container {
     width: 490px;
-    display: block;
     margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
 }
 input#search-bar {
     margin: 0 auto;
@@ -75,6 +76,10 @@ input#search-bar:focus:-ms-placeholder {
     float: right;
     width: 75px;
     height: 75px;
-    top: -62px;
-    right: 0px;
+    top: -15px;
+    right: 60px;
+}
+
+.container-buscador{
+    display: flex;
 }

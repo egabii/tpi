@@ -7,6 +7,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import { useHistory } from "react-router-dom";
 import {useState} from 'react';
+import "./style.css";
 
 export default function FormDescripcion () {
   let history=useHistory();
@@ -29,56 +30,72 @@ export default function FormDescripcion () {
   return (
     <div>
       <NuevaPropiedad/>
-      <Form required>
+      <Form noValidate validated={validated} onSubmit={handleSubmit} className="form-centro">
         <Form.Row className="form-row">
-          <Col md={5} className="my-1">
-          <Form.Group controlId="nroCliente">
-            <Form.Label>Titulo</Form.Label>
-            <Form.Control type="text" />
-          </Form.Group>
-          </Col>
-          <Col md={3} className="my-1">
-          <Form.Group controlId="TipoCliente">
-            <Form.Label>Precio</Form.Label>
-            <Form.Control type="number" min="0">
-            </Form.Control>
-          </Form.Group>
+          <Col md={8}>
+            <Col md={4}>
+            <Form.Group controlId="TitPropiedad">
+              <Form.Label>Titulo</Form.Label>
+              <Form.Control type="text" required/>
+            </Form.Group>
+            </Col>
+            <Col md={3}>
+            <Form.Group controlId="email">
+              <Form.Label>Precio</Form.Label>
+              <Form.Control type="number" placeholder="$" required/>
+            </Form.Group>
+            </Col>
           </Col>
         </Form.Row>
         <Form.Row className="form-row">
-          <Col md={3}>
+          <Col sm={1}>
           <Form.Group controlId="dniCliente">
-            <Form.Label>DNI</Form.Label>
-            <Form.Control type="text" placeholder="33091229" />
+            <Form.Label>Dormitorios</Form.Label>
+            <Form.Control type="number" min="0" max="20" placeholder="33091229" required/>
           </Form.Group>
           </Col>
-          <Col md={3}>
+          <Col sm={3}>
           <Form.Group controlId="email">
-            <Form.Label>DNI</Form.Label>
-            <Form.Control type="email" placeholder="ejemplo@ejemplo.com" />
+            <Form.Label>Artefactos</Form.Label>
+            <Form.Control type="text" required/>
           </Form.Group>
           </Col>
           <Col md={3}>
           <Form.Group controlId="direccion">
-            <Form.Label>Direccion</Form.Label>
-            <Form.Control type="text" placeholder="ejemplo@ejemplo.com" />
+            <Form.Label>Tipo</Form.Label>
+            <Form.Control as="select" defaultValue="Elegir" required>
+              <option>Departamento</option>
+              <option>Casa</option>
+              <option>Chalet</option>
+              <option>Local</option>
+              <option>Casa con local</option>
+              <option>Cabaña</option>
+              <option>Cochera</option>
+            </Form.Control>
           </Form.Group>
           </Col>
-        </Form.Row>
-        <Form.Row className='form-row-start'>
           <Col md={3}>
-            <Form.Group controlId="tipoContrato">
+          <Form.Group controlId="tipoContrato">
               <Form.Label>Tipo de Contrato</Form.Label>
-              <Form.Control as="select">
+              <Form.Control as="select" required>
                 <option>Venta</option>
                 <option>Alquiler</option>
               </Form.Control>
-            </Form.Group>
+          </Form.Group>
           </Col>
         </Form.Row>
+        <Form.Row >
+        <Col md={6}>
+          <Form.Group controlId="Descripcion">
+            <Form.Label>Descripcion</Form.Label>
+            <Form.Control as="textarea" rows={4} />
+          </Form.Group>
+          </Col>
+        </Form.Row>
+        
         <div className="btn-desplazo">
           <Link to= '/NuevaPropiedad/Ubicacion'><Button>Anterior</Button></Link>
-          <Link to='/NuevaPropiedad/AgregarMultimedia'><Button>Siguiente</Button></Link>
+          <Button type='submit'>Siguiente</Button>
         </div>
       </Form>
     </div>

@@ -64,3 +64,7 @@
   padding-top: 15px;
   justify-content: space-between;
 }
+
+.form-centro{
+  justify-content:stretch;
+}
