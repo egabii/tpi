@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import imagen from  '../assets/edificio.avif';
 import Image from 'react-bootstrap/Image';
 
+
 const HorizontalCard = ({ propiedad }) => {
   const history = useHistory();
   const verDetalle = () => {

@@ -77,11 +77,11 @@ class AppImagen extends React.Component {
     }
     return (
     <div className="MainDiv">
-      <div className="jumbotron text-center">
+      <div className="text-center">
           <h3>Agregar fotos de propiedad</h3>
           <br/>
       </div>
-      <div className="container">
+      <div className="">
           <PicturesWall />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PropiedadUnitaria from "../pages/Propiedades/PropiedadUnitaria";
-import Carrousel from './Carrousel.js'
+import Image from 'react-bootstrap/Image';
+import { Button } from "bootstrap";
 
 export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estado}) {
   return (
@@ -9,7 +10,7 @@ export default function Card ({key,titulo, descripcion, imagen,tipo,precio,estad
       <div class="row g-0">
         <div class="col-md-4" >
           <Link to='/PropiedadUnitaria'>
-              <Carrousel imagenC={imagen}/>
+              <Image src={imagen} fluid />
           </Link>
         </div>
         <div class="col-md-8">
