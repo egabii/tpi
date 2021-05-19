@@ -14,6 +14,8 @@ import Agenda from './pages/Agenda/Agenda';
 import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
 import PropiedadUnitaria from './pages/Propiedades/PropiedadUnitaria';
+import Cliente from './pages/Cliente/Cliente';
+import Documentacion from './pages/Cliente/Documentacion'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PrivateRoute({ children, ...rest }) {
@@ -61,6 +63,12 @@ function ProtectedPage() {
         </Route>
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
+        </Route>
+        <Route exact path="/Clientes">
+          <Cliente/>
+        </Route>
+        <Route exact path="/Documentacion">
+          <Documentacion/>
         </Route>
       </Switch>
     </Layout>

@@ -1,0 +1,32 @@
+.doble{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.campo{
+    margin-right: 2em;
+
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formPart{
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.btn-confirmar{
+    justify-content: flex-end ;
+}
+
+.codigo-cliente{
+    margin-left: 50%;
+}
+
+.formcorp{
+    padding-top: 20px;
+}

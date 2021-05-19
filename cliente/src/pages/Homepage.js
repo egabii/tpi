@@ -1,5 +1,6 @@
 import { Row, Container, Col, Form, Button} from 'react-bootstrap';
 import './homepage.css';
+import {Link} from 'react-router-dom'
 export default function Homepage(){
 
   return (
@@ -49,6 +50,7 @@ export default function Homepage(){
                 aria-label="Ubicacion" 
                 placeholder="Localidad, Provincia, ..." 
               />
+              <Link to="/catalogo">Catalogo</Link>
               <Button variant="primary" type="submit">
                 Buscar
               </Button>

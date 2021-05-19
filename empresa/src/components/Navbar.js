@@ -1,6 +1,7 @@
 import Nav from "react-bootstrap/Nav";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from '../contexts/AuthContext';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Navbar() {
   let history = useHistory();
@@ -41,6 +42,24 @@ export default function Navbar() {
           Agenda</Link>
       </Nav.Item>
       <Nav.Item as="li">
+        <Dropdown>
+          <Dropdown.Toggle className='nav-link text-light btn-outline-primary' variant='dark' id='dropdown-basic'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16" style={{marginRight: '10px'}}>
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            Cliente
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item>
+              <Link to={`/Clientes`}>Añadir</Link>
+            </Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Modificar</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Documentacion</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>      
+      </Nav.Item>
+      <Nav.Item as="li">
         <div>
           <a href="#" onClick={signout} className="nav-link text-light  btn-outline-primary"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16" style={{marginRight:'10px'}}>
@@ -50,6 +69,7 @@ export default function Navbar() {
           Cerrar Sesion</a>
         </div>
       </Nav.Item>
+      
     </Nav>
   );
 }
@@ -69,3 +89,30 @@ export default function Navbar() {
           </ul>
         </div>
       </li>
+
+
+/*
+<Link to={`/Clientes`} className="nav-link text-light btn-outline-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16" style={{marginRight: '10px'}}>
+      <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+      <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+    </svg>
+      Clientes
+</Link>
+
+
+
+<Dropdown  >
+  <Dropdown.Toggle variant="dark" id="dropdown-basic">
+    <img src="https://i.blogs.es/802389/steve-jobs-1/1366_2000.jpg" alt="" width="32" height="32" className="rounded-circle me-2" />
+    <strong>SUPER USER</strong>
+  </Dropdown.Toggle>
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">New project..</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Profile</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Sign out</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+*/
+
