@@ -1,9 +1,13 @@
-
+import Button from 'react-bootstrap/Button';
+import { useHistory } from 'react-router-dom';
 import imagen from  '../assets/edificio.avif';
 import Image from 'react-bootstrap/Image';
 
 const HorizontalCard = ({ propiedad }) => {
-
+  const history = useHistory();
+  const verDetalle = () => {
+    history.push('/catalogo/'+propiedad.id);
+  };
   return (
     <div className="card mb-3" >
       <div className="row g-0">
@@ -22,9 +26,8 @@ const HorizontalCard = ({ propiedad }) => {
               <span><strong>{propiedad.tipo}</strong></span>
               <span className="card-features">{`${propiedad.ubicacion.direccion}, ${propiedad.ubicacion.localidad}`} </span>
             </p>
-            <p className="card-text">
-              {propiedad.descripcion}
-            </p>
+            <p className="card-text">{propiedad.descripcion}</p>
+            <Button size="sm" onClick={verDetalle}>Ver Detalle</Button>
           </div>
         </div>
       </div>

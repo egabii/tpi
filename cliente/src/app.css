@@ -34,3 +34,14 @@
 .label-checked input[type="radio"] + label {
  cursor: pointer;
 }
+
+.form-container {
+  padding: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.padding-top-75 {
+  padding-top: 75px !important;
+}

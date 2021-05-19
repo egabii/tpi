@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Catalogo from './pages/Catalogo';
 import Homepage from './pages/Homepage';
+import Propiedad from './pages/Propiedad';
 import Layout from './layout/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route exact path="/catalogo">
           <Catalogo />
+        </Route>
+        <Route exact path="/catalogo/:id">
+          <Propiedad />
         </Route>
         <Route exact path="/la-empresa">
           <h1>Acerca de la empresa</h1>

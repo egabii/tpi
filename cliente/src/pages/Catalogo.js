@@ -6,7 +6,7 @@ import './catalogo.css';
 
 export default function Catalogo() {
   return (
-    <Container>
+    <Container className="padding-top-75">
       <Row>
         <Col sm={3}>
           <FilterPropiedades />

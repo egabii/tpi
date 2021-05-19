@@ -1,9 +1,15 @@
-import { Col, Form, Button } from 'react-bootstrap';
-
+import { Form, Button } from 'react-bootstrap';
 export default function FilterPropiedades() {
+  
+  const filtrar = (e) => {
+    if (e){
+      e.preventDefault();
+    }
+  };
+
   return (
-    <div className="filter-container">
-      <Form>
+    <div className="form-container">
+      <Form onSubmit={filtrar}>
         <div className="filter-control-box">
           <Form.Label controlId="ubicacion">Localidad</Form.Label><br />
           <Form.Control
