@@ -4,7 +4,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import './Cliente.css'
 
-export default function Cliente() {
+export default function AñadirCliente() {
     
     return (
         <div>
