@@ -26,7 +26,7 @@ return (
           </Col>
             <Col>
             <br></br>
-            <br></br>
+
             <Button variant="success">Buscar</Button>
             </Col>
             <Col></Col>
@@ -137,9 +137,9 @@ return (
           </Row>
 
           <Row>
-            <Col><Button variant="danger">Asentar Pago</Button></Col>
-            <Col><a href="http://francocorro0.000webhostapp.com/PagoPorVenta/" target="_blank"><Button variant="success">Imprimir</Button></a></Col>
-             </Row>
+            <Col><Button variant="success">Asentar Pago</Button></Col>
+            <Col><a href="http://francocorro0.000webhostapp.com/PagoPorVenta/" target="_blank"><Button variant="primary">Imprimir</Button></a></Col>
+         </Row>
               <br></br>
       </Col>
     </Row>

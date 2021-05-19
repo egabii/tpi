@@ -98,37 +98,38 @@ return (
                             </tr>
                           </tbody>
                         </Table>
-
-                        <Table striped bordered hover>
+                          <Table striped bordered hover>
                           <thead>
                             <tr>
                               <th>Hora</th>
-                              <th>Salida</th>
+                              <th>Entrada</th>
                               <th>Egreso</th>
                              
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td>11 mins</td>
+                              <td>16 mins</td>
                               <td>Mark</td>
                               <td>$ 22.345</td>
                              
                             </tr>
                             <tr>
-                              <td>23 mins</td>
+                              <td>20 mins</td>
                               <td>Jacob</td>
                               <td>$ 28.565</td>
                               
                             </tr>
                             <tr>
-                              <td>34 mins</td>
-                              <td colSpan="2">Larryd</td>
+                              <td>54 mins</td>
+                              <td colSpan="2">Bird</td>
+                           
                               
                             </tr>
                           </tbody>
                         </Table>
 
+                        
                         <h4>Total de Ingresos:$ 4.443,33</h4>
                          <h4>Total de Egresos:$ 38.443</h4>
                          <hr></hr>
@@ -136,8 +137,8 @@ return (
                           <Row>
                         <Col></Col>
                         <Col></Col>
-                        <Col><Button variant="danger">Confirmar operación</Button></Col>
-                        <Col><a href ="http://francocorro0.000webhostapp.com/CierreDeCaja" target="_blank"><Button variant="success">Imprimir Balance </Button></a></Col>
+                        <Col><Button variant="success">Confirmar operación</Button></Col>
+                        <Col><a href ="http://francocorro0.000webhostapp.com/CierreDeCaja" target="_blank"><Button variant="primary">Imprimir Balance </Button></a></Col>
                          </Row>
                          <hr></hr>
 
