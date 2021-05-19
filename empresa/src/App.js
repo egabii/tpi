@@ -15,11 +15,12 @@ import LoginPage from './pages/Login/LoginPage';
 import Layout from './layout/Layout';
 import FormUbicacion from './components/FormularioUbicacion';
 import PropiedadUnitaria from './pages/Propiedades/PropiedadUnitaria';
-import Cliente from './pages/Cliente/Cliente';
+import AñadirCliente from './pages/Cliente/AñadirCliente';
 import Documentacion from './pages/Cliente/Documentacion'
 import FormPropietario from './components/FormularioPropietario';
 import FormDescripcion from './components/FormularioDescripcion';
 import AgregarMultimedia from './pages/Propiedades/NuevaPropiedad/AgregarMultimedia';
+import ListarClientes from './pages/Cliente/ListarClientes'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PrivateRoute({ children, ...rest }) {
@@ -68,8 +69,8 @@ function ProtectedPage() {
         <Route exact path= "/PropiedadUnitaria"> 
           <PropiedadUnitaria/>
         </Route>
-        <Route exact path="/Clientes">
-          <Cliente/>
+        <Route exact path="/AñadirCliente">
+          <AñadirCliente/>
         </Route>
         <Route exact path="/Documentacion">
           <Documentacion/>
@@ -85,6 +86,9 @@ function ProtectedPage() {
         </Route>
         <Route exact path= "/NuevaPropiedad/AgregarMultimedia"> 
           <AgregarMultimedia/>
+        </Route>
+        <Route exact path="/ListaClientes">
+          <ListarClientes/>
         </Route>
       </Switch>
     </Layout>

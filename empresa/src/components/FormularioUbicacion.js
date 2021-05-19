@@ -70,8 +70,10 @@ export default function FormUbicacion () {
         </Form.Group>
         </Col>
       </Form.Row>
+      <div className="btn-desplazo">
       <Link to= '/NuevaPropiedad/Propietario'><Button>Anterior</Button></Link>
       <Link to='/NuevaPropiedad/Descripcion'><Button>Siguiente</Button></Link>
+      </div>
     </Form>
     </div>
   );
@@ -83,13 +85,13 @@ export  function NuevaPropiedad() {
     <h1>Nueva Propiedad</h1>
     <h3>Ingresar datos</h3>
     <Tabs defaultActiveKey="ubicacion"  id="uncontrolled-tab-example">
-      <Tab eventKey="propietario" title="Propietario">
+      <Tab eventKey="propietario" title="Propietario" disabled>
       </Tab>
       <Tab eventKey="ubicacion" title="Ubicacion">
       </Tab>
-      <Tab eventKey="descripcion" title="Descripcion">
+      <Tab eventKey="descripcion" title="Descripcion" disabled>
       </Tab>
-      <Tab eventKey="multimedia" title="Multimedia">
+      <Tab eventKey="multimedia" title="Multimedia" disabled>
       </Tab>
     </Tabs>
     </>

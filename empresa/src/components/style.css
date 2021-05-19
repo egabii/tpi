@@ -53,3 +53,14 @@
     background-color: #fff;
     font-feature-settings: 'tnum', "tnum";
 }
+
+.btn-siguiente{
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-desplazo{
+  padding-top: 15px;
+  justify-content: space-between;
+}
