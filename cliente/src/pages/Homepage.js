@@ -57,8 +57,7 @@ export default function Homepage(){
                 className="form-group-item"
                 id="ubicacion"
                 as="input" 
-                type="text" 
-                custom 
+                type="text"  
                 aria-label="Ubicacion" 
                 placeholder="Localidad, Provincia, ..." 
               />

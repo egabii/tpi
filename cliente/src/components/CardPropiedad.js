@@ -27,7 +27,7 @@ const HorizontalCard = ({ propiedad }) => {
               <span className="card-features">{`${propiedad.ubicacion.direccion}, ${propiedad.ubicacion.localidad}`} </span>
             </p>
             <p className="card-text">{propiedad.descripcion}</p>
-            <Button size="sm" onClick={verDetalle}>Ver Detalle</Button>
+            <Button className="domus-btn" size="sm" onClick={verDetalle}>Ver Detalle</Button>
           </div>
         </div>
       </div>

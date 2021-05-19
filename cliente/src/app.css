@@ -1,5 +1,5 @@
 :root {
-  --domus-color: #13a013;
+  --domus-color: #5abd5a;
 }
 
 .domus-color {
@@ -7,8 +7,12 @@
 }
 
 .domus-btn:hover, .domus-btn, .domus-btn:active {
-  background-color: var(--domus-color);
-  border-color: var(--domus-color);
+  background-color: var(--domus-color) !important;
+  border-color: var(--domus-color) !important;
+}
+
+.domus-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgb(90 189 90 / 38%) !important;
 }
 
 .truncate {

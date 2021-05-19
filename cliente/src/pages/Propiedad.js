@@ -1,8 +1,12 @@
 /// pagina de detalle de una propiedad
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Carousel, Image } from 'react-bootstrap';
 import { IoIosBed } from 'react-icons/io';
 import { GiBathtub, GiSandsOfTime, GiSofa } from 'react-icons/gi';
 import { BiShapeSquare, BiBuilding, BiBus } from "react-icons/bi";
+import casa1 from '../assets/casa1.jpg';
+import casa2 from '../assets/casa2.jpg';
+import casa3 from '../assets/casa3.jpg';
+import casa4 from '../assets/casa4.jpg';
 
 
 import './propiedad.css';
@@ -65,6 +69,22 @@ export default function Propiedad() {
             Aenean enim risus, dignissim vitae nibh suscipit, accumsan laoreet enim. Quisque faucibus leo quis orci ullamcorper mattis.
             Cras vitae leo eu arcu tempus venenatis.
             </p>
+          </section>
+          <section className="gallery">
+            <Carousel>
+              <Carousel.Item>
+                <Image fluid src={casa1} style={{ height: 450, width: 730 }}/>
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image fluid src={casa2} style={{ height: 450, width: 730 }} />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image fluid src={casa3} style={{ height: 450, width: 730 }} />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image fluid src={casa4} style={{ height: 450, width: 730 }} />
+              </Carousel.Item>
+            </Carousel>
           </section>
         </Col>
         <Col sm={4}>

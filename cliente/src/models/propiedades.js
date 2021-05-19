@@ -1,7 +1,7 @@
 const propiedades = [
   {
     id: 'propiedad.1',
-    precio: '$400',
+    precio: '$400.000',
     habitaciones: 2,
     banios: 1,
     espacio: 20,
@@ -24,7 +24,7 @@ const propiedades = [
   },
   {
     id: 'propiedad.2',
-    precio: '$400',
+    precio: '$1.000.000',
     habitaciones: 2,
     banios: 1,
     espacio: 20,
@@ -47,7 +47,7 @@ const propiedades = [
   },
   {
     id: 'propiedad.3',
-    precio: '$400',
+    precio: '$670.000',
     habitaciones: 2,
     banios: 1,
     espacio: 20,

@@ -61,7 +61,7 @@ export default function FilterPropiedades() {
             <option>+3</option>
           </Form.Control>
         </div>
-        <Button variant="primary" type="submit" className="domus-btn btn-block">Buscar</Button>
+        <Button variant="primary" type="submit" block className="domus-btn">Buscar</Button>
       </Form>
     </div>
   );
